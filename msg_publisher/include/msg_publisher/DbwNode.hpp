@@ -34,14 +34,15 @@
 // ROS messages
 #include <can_msgs/msg/frame.hpp>
 #include <geometry_msgs/msg/twist_stamped.hpp>
+// #include <raptor_dbw_msgs/msg/accelerator_pedal_cmd.hpp>
+
 #include <vm_msgs/msg/ams_report.hpp>
 #include <vm_msgs/msg/brake_report.hpp>
-#include <vm_msgs/msg/vcu_report.hpp>
 #include <vm_msgs/msg/dash_report.hpp>
 #include <vm_msgs/msg/suspension_report.hpp>
+#include <vm_msgs/msg/vcu_report.hpp>
+#include <vm_msgs/msg/inverter_report.hpp>
 
-
-// temp stuff
 
 #include <sensor_msgs/msg/imu.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
@@ -72,38 +73,59 @@ public:
   ~DbwNode();
 
 private:
-  void timerCallback();
-  void recvCAN(const can_msgs::msg::Frame::SharedPtr msg);
 
-  rclcpp::TimerBase::SharedPtr timer_;
+  void timerAMSCallback();
+  void timerVCUCallback();
+  void timerDashCallback();
+  void timerSuspensionCallback();
+  void timerInverterCallback();
+  void timerBrakeCallback();
+
+  void recvCAN0(const can_msgs::msg::Frame::SharedPtr msg);
+  void recvCAN1(const can_msgs::msg::Frame::SharedPtr msg);
+  void recvCAN2(const can_msgs::msg::Frame::SharedPtr msg);
+  // void recvBrakeCmd(const raptor_dbw_msgs::msg::BrakeCmd::SharedPtr msg);
+
+  vm_msgs::msg::AmsReport ams_report_msg_;
+  vm_msgs::msg::BrakeReport brake_report_msg_;
+  vm_msgs::msg::DashReport dash_report_msg_;
+  vm_msgs::msg::SuspensionReport suspension_report_msg_;
+  vm_msgs::msg::VcuReport vcu_report_msg_;
+  vm_msgs::msg::InverterReport inverter_report_msg_;
 
 
-  bool publishDbwEnabled();
-
-  // Licensing
-  std::string vin_;
-
-  // Frame ID
-  std::string frame_id_;
-
-  // Buttons (enable/disable)
-  bool buttons_;
-
-  // Ackermann steering
-  double acker_wheelbase_;
-  double acker_track_;
-  double steering_ratio_;
+  rclcpp::TimerBase::SharedPtr timer_ams_report_;
+  rclcpp::TimerBase::SharedPtr timer_vcu_report_;
+  rclcpp::TimerBase::SharedPtr timer_inverter_report_;
+  rclcpp::TimerBase::SharedPtr timer_dash_report_;
+  rclcpp::TimerBase::SharedPtr timer_brake_report_;
+  rclcpp::TimerBase::SharedPtr timer_suspension_report_;
 
   // Subscribed topics
-  rclcpp::Subscription<can_msgs::msg::Frame>::SharedPtr sub_can_;
+  rclcpp::Subscription<can_msgs::msg::Frame>::SharedPtr sub_can0_;
+  rclcpp::Subscription<can_msgs::msg::Frame>::SharedPtr sub_can1_;
+  rclcpp::Subscription<can_msgs::msg::Frame>::SharedPtr sub_can2_;
+  // rclcpp::Subscription<raptor_dbw_msgs::msg::BrakeCmd>::SharedPtr sub_brake_;
+
 
   // Published topics
   rclcpp::Publisher<can_msgs::msg::Frame>::SharedPtr pub_can_;
-
+  // rclcpp::Publisher<raptor_dbw_msgs::msg::AcceleratorPedalReport>::SharedPtr pub_accel_pedal_; // acc pedal report do
+  rclcpp::Publisher<vm_msgs::msg::AmsReport>::SharedPtr pub_ams_report_;
+  rclcpp::Publisher<vm_msgs::msg::BrakeReport>::SharedPtr pub_brake_report_; 
+  rclcpp::Publisher<vm_msgs::msg::DashReport>::SharedPtr pub_dash_report_; 
+  rclcpp::Publisher<vm_msgs::msg::SuspensionReport>::SharedPtr pub_suspension_report_; 
+  rclcpp::Publisher<vm_msgs::msg::VcuReport>::SharedPtr pub_vcu_report_; 
+  rclcpp::Publisher<vm_msgs::msg::InverterReport>::SharedPtr pub_inverter_report_; 
   
 
-  NewEagle::Dbc dbwDbc_;
-  std::string dbcFile_;
+  NewEagle::Dbc dbwDbc_can0_;
+  NewEagle::Dbc dbwDbc_can1_;
+  NewEagle::Dbc dbwDbc_can2_;
+  std::string dbcFile_can0_;
+  std::string dbcFile_can1_;
+  std::string dbcFile_can2_;
+
 };
 
 }  // namespace msg_publisher

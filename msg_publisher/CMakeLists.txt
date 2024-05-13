@@ -16,32 +16,44 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 # find dependencies
+find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_auto REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(vm_msgs REQUIRED)
-ament_auto_find_build_dependencies()
+find_package(can_dbc_parser REQUIRED)
 
-
-ament_auto_add_executable(${PROJECT_NAME}_node
-  src/node.cpp
+include_directories(include)
+add_library(raptor_lib SHARED
   src/DbwNode.cpp
 )
 
-ament_auto_add_executable(can2ros_node
-  src/can2node.cpp
-  src/CAN2ROS.cpp
+ament_target_dependencies(raptor_lib
+  rclcpp
+  rclcpp_components
+  vm_msgs
+  nav_msgs
+  sensor_msgs
+  geometry_msgs
+  can_dbc_parser
 )
 
-ament_target_dependencies(msg_publisher_node vm_msgs)
-ament_target_dependencies(can2ros_node vm_msgs)
+rclcpp_components_register_node(raptor_lib
+  PLUGIN "msg_publisher::DbwNode"
+  EXECUTABLE can_frame_to_msg_node
+)
 
-target_compile_options(${PROJECT_NAME}_node PRIVATE -Wno-unused-function)
-
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
+install(TARGETS raptor_lib
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
 
 ament_auto_package(
   INSTALL_TO_SHARE
-    launch
+  launch
 )
