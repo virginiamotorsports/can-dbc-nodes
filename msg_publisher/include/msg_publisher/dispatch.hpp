@@ -26,12 +26,12 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef RAPTOR_DBW_CAN__DISPATCH_HPP_
-#define RAPTOR_DBW_CAN__DISPATCH_HPP_
+#ifndef msg_publisher__DISPATCH_HPP_
+#define msg_publisher__DISPATCH_HPP_
 
 #include <stdint.h>
 
-namespace raptor_dbw_can
+namespace msg_publisher
 {
 
 #undef BUILD_ASSERT
@@ -84,6 +84,6 @@ enum
   ID_M1_GENERAL_18              = 0x0018,
 };
 
-}  // namespace raptor_dbw_can
+}  // namespace msg_publisher
 
-#endif  // RAPTOR_DBW_CAN__DISPATCH_HPP_
+#endif  // msg_publisher__DISPATCH_HPP_

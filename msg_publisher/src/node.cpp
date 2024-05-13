@@ -28,7 +28,7 @@
 
 #include <memory>
 
-#include "raptor_dbw_can/DbwNode.hpp"
+#include "msg_publisher/DbwNode.hpp"
 
 int main(int argc, char ** argv)
 {
@@ -36,7 +36,7 @@ int main(int argc, char ** argv)
   rclcpp::NodeOptions options;
   rclcpp::executors::SingleThreadedExecutor exec;
 
-  auto node = std::make_shared<raptor_dbw_can::DbwNode>(options);
+  auto node = std::make_shared<msg_publisher::DbwNode>(options);
   exec.add_node(node->get_node_base_interface());
   exec.spin();
 

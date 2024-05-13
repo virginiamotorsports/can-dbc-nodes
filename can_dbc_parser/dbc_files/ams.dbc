@@ -1,0 +1,239 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 256 Status: 8 Vector__XXX
+
+BO_ 257 Faults: 8 Vector__XXX
+
+BO_ 258 Dashboard: 8 Vector__XXX
+
+BO_ 259 Temp1: 8 Vector__XXX
+ SG_ Temp1 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp2 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp3 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp4 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp5 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp6 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp7 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp8 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 260 Temp2: 8 Vector__XXX
+ SG_ Temp9 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp10 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp11 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp12 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp13 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp14 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp15 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp16 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 261 Temp3: 8 Vector__XXX
+ SG_ Temp17 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp18 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp19 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp20 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp21 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp22 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp23 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp24 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 262 Temp4: 8 Vector__XXX
+ SG_ Temp25 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp26 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp27 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp28 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp29 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp30 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp31 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp32 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 263 Temp5: 8 Vector__XXX
+ SG_ Temp33 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp34 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp35 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp36 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp37 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp38 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp39 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp40 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 264 Temp6: 8 Vector__XXX
+ SG_ Temp41 : 0|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp42 : 8|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp43 : 16|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp44 : 24|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp45 : 32|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp46 : 40|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp47 : 48|8@0+ (1,0) [0|120] "C" Vector__XXX
+ SG_ Temp48 : 56|8@0+ (1,0) [0|120] "C" Vector__XXX
+
+BO_ 265 Voltage1: 8 Vector__XXX
+ SG_ Cell1 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell2 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell3 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell4 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell5 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell6 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell7 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell8 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 266 Voltage2: 8 Vector__XXX
+ SG_ Cell9 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell10 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell11 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell12 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell13 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell14 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell15 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell16 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 267 Voltage3: 8 Vector__XXX
+ SG_ Cell17 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell18 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell19 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell20 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell21 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell22 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell23 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell24 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 268 Voltage4: 8 Vector__XXX
+ SG_ Cell25 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell26 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell27 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell28 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell29 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell30 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell31 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell32 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 269 Voltage5: 8 Vector__XXX
+ SG_ Cell33 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell34 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell35 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell36 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell37 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell38 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell39 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell40 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 270 Voltage6: 8 Vector__XXX
+ SG_ Cell41 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell42 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell43 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell44 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell45 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell46 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell47 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell48 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 271 Voltage7: 8 Vector__XXX
+ SG_ Cell49 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell50 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell51 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell52 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell53 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell54 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell55 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell56 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 272 Voltage8: 8 Vector__XXX
+ SG_ Cell57 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell58 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell59 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell60 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell61 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell62 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell63 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell64 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 273 Voltage9: 8 Vector__XXX
+ SG_ Cell65 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell66 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell67 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell68 : 24|8@0+ (0.01,100) [2.5|4] "V" Vector__XXX
+ SG_ Cell69 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell70 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell71 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell72 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 274 Voltage10: 8 Vector__XXX
+ SG_ Cell73 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell74 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell75 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell76 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell77 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell78 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell79 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell80 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 275 Voltage11: 8 Vector__XXX
+ SG_ Cell81 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell82 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell83 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell84 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell85 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell86 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell87 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell88 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 276 Voltage12: 8 Vector__XXX
+ SG_ Cell89 : 0|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell90 : 8|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell91 : 16|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell92 : 24|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell93 : 32|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell94 : 40|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell95 : 48|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+ SG_ Cell96 : 56|8@0+ (0.01,100) [2.5|4.3] "V" Vector__XXX
+
+BO_ 1712 OrionMSG1: 8 Vector__XXX
+ SG_ Pack_Inst_voltage : 15|16@0+ (0.1,0) [0|6553.5] "" Vector__XXX
+ SG_ Pack_SOC : 39|8@0+ (0.5,0) [0|127.5] "" Vector__XXX
+
+BO_ 1713 OrionMSG2: 8 Vector__XXX
+ SG_ Pack_High_Temp : 39|8@0- (1,0) [-128|127] "" Vector__XXX
+ SG_ Pack_Low_Temp : 47|8@0- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 1714 OrionMSG3: 8 Vector__XXX
+ SG_ Low_Cell_Voltage : -1|16@0+ (0.0001,0) [0|6.5535] "" Vector__XXX
+ SG_ High_Cell_Voltage : 15|16@0+ (0.0001,0) [0|6.5535] "" Vector__XXX
+
+
+
+

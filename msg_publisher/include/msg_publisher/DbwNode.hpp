@@ -26,16 +26,25 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef RAPTOR_DBW_CAN__CAN2Node_HPP_
-#define RAPTOR_DBW_CAN__CAN2Node_HPP_
+#ifndef msg_publisher__DBWNODE_HPP_
+#define msg_publisher__DBWNODE_HPP_
 
 #include <rclcpp/rclcpp.hpp>
 
 // ROS messages
 #include <can_msgs/msg/frame.hpp>
-#include <dash_msgs/msg/motec_report.hpp>
+#include <geometry_msgs/msg/twist_stamped.hpp>
+#include <vm_msgs/msg/ams_report.hpp>
+#include <vm_msgs/msg/brake_report.hpp>
+#include <vm_msgs/msg/vcu_report.hpp>
+#include <vm_msgs/msg/dash_report.hpp>
+#include <vm_msgs/msg/suspension_report.hpp>
 
 
+// temp stuff
+
+#include <sensor_msgs/msg/imu.hpp>
+#include <sensor_msgs/msg/joint_state.hpp>
 #include <std_msgs/msg/bool.hpp>
 #include <std_msgs/msg/empty.hpp>
 #include <std_msgs/msg/string.hpp>
@@ -50,42 +59,53 @@
 #include <string>
 #include <vector>
 
-#include "raptor_dbw_can/dispatch.hpp"
+#include "msg_publisher/dispatch.hpp"
 
 using namespace std::chrono_literals;  // NOLINT
 
-namespace raptor_dbw_can
+namespace msg_publisher
 {
-class CAN2Node : public rclcpp::Node
+class DbwNode : public rclcpp::Node
 {
 public:
-  explicit CAN2Node(const rclcpp::NodeOptions & options);
-  ~CAN2Node();
+  explicit DbwNode(const rclcpp::NodeOptions & options);
+  ~DbwNode();
 
 private:
+  void timerCallback();
   void recvCAN(const can_msgs::msg::Frame::SharedPtr msg);
-  void motecPublisher();
 
-  rclcpp::TimerBase::SharedPtr motec_timer;
+  rclcpp::TimerBase::SharedPtr timer_;
 
-  dash_msgs::msg::MotecReport motec_report_msg;
+
+  bool publishDbwEnabled();
+
+  // Licensing
+  std::string vin_;
 
   // Frame ID
   std::string frame_id_;
 
+  // Buttons (enable/disable)
+  bool buttons_;
+
+  // Ackermann steering
+  double acker_wheelbase_;
+  double acker_track_;
+  double steering_ratio_;
 
   // Subscribed topics
   rclcpp::Subscription<can_msgs::msg::Frame>::SharedPtr sub_can_;
 
   // Published topics
-  rclcpp::Publisher<dash_msgs::msg::MotecReport>::SharedPtr pub_motec_report;
+  rclcpp::Publisher<can_msgs::msg::Frame>::SharedPtr pub_can_;
 
+  
 
   NewEagle::Dbc dbwDbc_;
   std::string dbcFile_;
-  uint32_t count_;
 };
 
-}  // namespace raptor_dbw_can
+}  // namespace msg_publisher
 
-#endif  // RAPTOR_DBW_CAN__CAN2Node_HPP_
+#endif  // msg_publisher__DBWNODE_HPP_

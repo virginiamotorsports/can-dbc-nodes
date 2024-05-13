@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(raptor_dbw_can)
+project(msg_publisher)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -17,7 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake_auto REQUIRED)
-find_package(dash_msgs REQUIRED)
+find_package(vm_msgs REQUIRED)
 ament_auto_find_build_dependencies()
 
 
@@ -31,8 +31,8 @@ ament_auto_add_executable(can2ros_node
   src/CAN2ROS.cpp
 )
 
-ament_target_dependencies(raptor_dbw_can_node dash_msgs)
-ament_target_dependencies(can2ros_node dash_msgs)
+ament_target_dependencies(msg_publisher_node vm_msgs)
+ament_target_dependencies(can2ros_node vm_msgs)
 
 target_compile_options(${PROJECT_NAME}_node PRIVATE -Wno-unused-function)
 

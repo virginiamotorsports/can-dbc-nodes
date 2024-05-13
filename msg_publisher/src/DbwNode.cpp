@@ -26,18 +26,18 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include "raptor_dbw_can/DbwNode.hpp"
+#include "msg_publisher/DbwNode.hpp"
 #include <iostream>
 
 #include <algorithm>
 #include <cmath>
 #include <string>
 
-namespace raptor_dbw_can
+namespace msg_publisher
 {
 
 DbwNode::DbwNode(const rclcpp::NodeOptions & options)
-: Node("raptor_dbw_can_node", options)
+: Node("msg_publisher_node", options)
 {
   dbcFile_ = this->declare_parameter("dbw_dbc_file", "");
 
@@ -95,4 +95,4 @@ void DbwNode::recvCAN(const can_msgs::msg::Frame::SharedPtr msg)
     }
   }
 }
-}  // namespace raptor_dbw_can
+}  // namespace msg_publisher

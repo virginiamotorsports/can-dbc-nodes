@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>raptor_dbw_can</name>
+  <name>msg_publisher</name>
   <version>1.0.0</version>
   <description>CAN translator for drive-by-wire interface to the New Eagle Raptor DBW kit</description>
 
@@ -11,7 +11,7 @@
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <depend>rclcpp</depend>
-  <depend>dash_msgs</depend>
+  <depend>vm_msgs</depend>
   <depend>can_msgs</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>

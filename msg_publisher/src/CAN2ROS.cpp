@@ -26,14 +26,14 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include "raptor_dbw_can/CAN2ROS.hpp"
+#include "msg_publisher/CAN2ROS.hpp"
 #include <iostream>
 
 #include <algorithm>
 #include <cmath>
 #include <string>
 
-namespace raptor_dbw_can
+namespace msg_publisher
 {
 
 CAN2Node::CAN2Node(const rclcpp::NodeOptions & options)
@@ -144,4 +144,4 @@ void CAN2Node::recvCAN(const can_msgs::msg::Frame::SharedPtr msg)
 
 
 
-}  // namespace raptor_dbw_can
+}  // namespace msg_publisher
