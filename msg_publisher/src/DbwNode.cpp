@@ -120,437 +120,349 @@ void DbwNode::recvCAN0(const can_msgs::msg::Frame::SharedPtr msg)
 
       case MODULATION_AND_FLUX_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(173);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::ModulationAndFluxInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.iq_command = message->GetSignal("INV_Iq_Command")->GetResult();
-            // out.id_command = message->GetSignal("INV_Id_Command")->GetResult();
-            // out.flux_weakening_output = message->GetSignal("INV_Flux_Weakening_Output")->GetResult();
-            // out.modulation_index = message->GetSignal("INV_Modulation_Index")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Iq_Command = message->GetSignal("INV_Iq_Command")->GetResult();
+                inverter_report_msg_.INV_Id_Command = message->GetSignal("INV_Id_Command")->GetResult();
+                inverter_report_msg_.INV_Flux_Weakening_Output = message->GetSignal("INV_Flux_Weakening_Output")->GetResult();
+                inverter_report_msg_.INV_Modulation_Index = message->GetSignal("INV_Modulation_Index")->GetResult();
+            }
         }
         break;
 
       case TORQUE_AND_TIMER_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(172);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::TorqueAndTimerInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.power_on_timer = message->GetSignal("INV_Power_On_Timer")->GetResult();
-            // out.torque_feedback = message->GetSignal("INV_Torque_Feedback")->GetResult();
-            // out.commanded_torque = message->GetSignal("INV_Commanded_Torque")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Power_On_Timer = message->GetSignal("INV_Power_On_Timer")->GetResult();
+                inverter_report_msg_.INV_Torque_Feedback = message->GetSignal("INV_Torque_Feedback")->GetResult();
+                inverter_report_msg_.INV_Commanded_Torque = message->GetSignal("INV_Commanded_Torque")->GetResult();
+            }
         }
         break;
 
       case READ_WRITE_PARAM_RESPONSE:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(194);
-          if (msg->dlc >= message->GetDlc()) {
+          // NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+          //   if (msg->dlc >= message->GetDlc()) {
+          //       message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::ReadWriteParamResponse out;
-            // out.header.stamp = msg->header.stamp;
-            // out.parameter_response_write_ok = message->GetSignal("INV_Parameter_Response_Write_OK")->GetResult();
-            // out.parameter_response_data = message->GetSignal("INV_Parameter_Response_Data")->GetResult();
-            // out.parameter_response_addr = message->GetSignal("INV_Parameter_Response_Addr")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+          //       inverter_report_msg_.INV_Parameter_Response_Write_OK = message->GetSignal("INV_Parameter_Response_Write_OK")->GetResult();
+          //       inverter_report_msg_.INV_Parameter_Response_Data = message->GetSignal("INV_Parameter_Response_Data")->GetResult();
+          //       inverter_report_msg_.INV_Parameter_Response_Addr = message->GetSignal("INV_Parameter_Response_Addr")->GetResult();
+          //   }
         }
         break;
 
       case READ_WRITE_PARAM_COMMAND:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(193);
-          if (msg->dlc >= message->GetDlc()) {
+          // NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+          //   if (msg->dlc >= message->GetDlc()) {
+          //       message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::ReadWriteParamCommand out;
-            // out.header.stamp = msg->header.stamp;
-            // out.parameter_data = message->GetSignal("VCU_INV_Parameter_Data")->GetResult();
-            // out.parameter_rw_command = message->GetSignal("VCU_INV_Parameter_RW_Command")->GetResult();
-            // out.parameter_address = message->GetSignal("VCU_INV_Parameter_Address")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+          //       inverter_report_msg_.VCU_INV_Parameter_Data = message->GetSignal("VCU_INV_Parameter_Data")->GetResult();
+          //       inverter_report_msg_.VCU_INV_Parameter_RW_Command = message->GetSignal("VCU_INV_Parameter_RW_Command")->GetResult();
+          //       inverter_report_msg_.VCU_INV_Parameter_Address = message->GetSignal("VCU_INV_Parameter_Address")->GetResult();
+          //   }
         }
         break;
 
       case COMMAND_MESSAGE:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(192);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::CommandMessage out;
-            // out.header.stamp = msg->header.stamp;
-            // out.inverter_enable = message->GetSignal("VCU_INV_Inverter_Enable")->GetResult();
-            // out.direction_command = message->GetSignal("VCU_INV_Direction_Command")->GetResult();
-            // out.speed_command = message->GetSignal("VCU_INV_Speed_Command")->GetResult();
-            // out.torque_command = message->GetSignal("VCU_INV_Torque_Command")->GetResult();
-            // out.inverter_discharge = message->GetSignal("VCU_INV_Inverter_Discharge")->GetResult();
-            // out.torque_limit_command = message->GetSignal("VCU_INV_Torque_Limit_Command")->GetResult();
-            // out.speed_mode_enable = message->GetSignal("VCU_INV_Speed_Mode_Enable")->GetResult();
-            // out.rolling_counter = message->GetSignal("VCU_INV_Rolling_Counter")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.VCU_INV_Inverter_Enable = message->GetSignal("VCU_INV_Inverter_Enable")->GetResult();
+                inverter_report_msg_.VCU_INV_Direction_Command = message->GetSignal("VCU_INV_Direction_Command")->GetResult();
+                inverter_report_msg_.VCU_INV_Speed_Command = message->GetSignal("VCU_INV_Speed_Command")->GetResult();
+                inverter_report_msg_.VCU_INV_Torque_Command = message->GetSignal("VCU_INV_Torque_Command")->GetResult();
+                inverter_report_msg_.VCU_INV_Inverter_Discharge = message->GetSignal("VCU_INV_Inverter_Discharge")->GetResult();
+                inverter_report_msg_.VCU_INV_Torque_Limit_Command = message->GetSignal("VCU_INV_Torque_Limit_Command")->GetResult();
+                inverter_report_msg_.VCU_INV_Speed_Mode_Enable = message->GetSignal("VCU_INV_Speed_Mode_Enable")->GetResult();
+                inverter_report_msg_.VCU_INV_Rolling_Counter = message->GetSignal("VCU_INV_Rolling_Counter")->GetResult();
+            }
         }
         break;
 
       case FAULT_CODES:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(171);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::FaultCodes out;
-            // out.header.stamp = msg->header.stamp;
-            // out.run_fault_hi = message->GetSignal("INV_Run_Fault_Hi")->GetResult();
-            // out.post_fault_hi = message->GetSignal("INV_Post_Fault_Hi")->GetResult();
-            // out.run_fault_lo = message->GetSignal("INV_Run_Fault_Lo")->GetResult();
-            // out.post_fault_lo = message->GetSignal("INV_Post_Fault_Lo")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Run_Fault_Hi = message->GetSignal("INV_Run_Fault_Hi")->GetResult();
+                inverter_report_msg_.INV_Post_Fault_Hi = message->GetSignal("INV_Post_Fault_Hi")->GetResult();
+                inverter_report_msg_.INV_Run_Fault_Lo = message->GetSignal("INV_Run_Fault_Lo")->GetResult();
+                inverter_report_msg_.INV_Post_Fault_Lo = message->GetSignal("INV_Post_Fault_Lo")->GetResult();
+            }
         }
         break;
 
       case INTERAL_STATES:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(170);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::InternalStates out;
-            // out.header.stamp = msg->header.stamp;
-            // out.direction_command = message->GetSignal("INV_Direction_Command")->GetResult();
-            // out.inverter_enable_state = message->GetSignal("INV_Inverter_Enable_State")->GetResult();
-            // out.relay_3_status = message->GetSignal("INV_Relay_3_Status")->GetResult();
-            // out.relay_4_status = message->GetSignal("INV_Relay_4_Status")->GetResult();
-            // out.relay_2_status = message->GetSignal("INV_Relay_2_Status")->GetResult();
-            // out.inverter_run_mode = message->GetSignal("INV_Inverter_Run_Mode")->GetResult();
-            // out.inverter_command_mode = message->GetSignal("INV_Inverter_Command_Mode")->GetResult();
-            // out.relay_1_status = message->GetSignal("INV_Relay_1_Status")->GetResult();
-            // out.inverter_state = message->GetSignal("INV_Inverter_State")->GetResult();
-            // out.vsm_state = message->GetSignal("INV_VSM_State")->GetResult();
-            // out.inverter_enable_lockout = message->GetSignal("INV_Inverter_Enable_Lockout")->GetResult();
-            // out.inverter_discharge_state = message->GetSignal("INV_Inverter_Discharge_State")->GetResult();
-            // out.relay_5_status = message->GetSignal("INV_Relay_5_Status")->GetResult();
-            // out.relay_6_status = message->GetSignal("INV_Relay_6_Status")->GetResult();
-            // out.bms_active = message->GetSignal("INV_BMS_Active")->GetResult();
-            // out.bms_torque_limiting = message->GetSignal("INV_BMS_Torque_Limiting")->GetResult();
-            // out.pwm_frequency = message->GetSignal("INV_PWM_Frequency")->GetResult();
-            // out.limit_max_speed = message->GetSignal("INV_Limit_Max_Speed")->GetResult();
-            // out.limit_hot_spot = message->GetSignal("INV_Limit_Hot_Spot")->GetResult();
-            // out.low_speed_limiting = message->GetSignal("INV_Low_Speed_Limiting")->GetResult();
-            // out.rolling_counter = message->GetSignal("INV_Rolling_Counter")->GetResult();
-            // out.limit_coolant_derating = message->GetSignal("INV_Limit_Coolant_Derating")->GetResult();
-            // out.self_sensing_assist_enable = message->GetSignal("INV_Self_Sensing_Assist_Enable")->GetResult();
-            // out.limit_stall_burst_model = message->GetSignal("INV_Limit_Stall_Burst_Model")->GetResult();
-            // out.burst_model_mode = message->GetSignal("INV_Burst_Model_Mode")->GetResult();
-            // out.key_switch_start_status = message->GetSignal("INV_Key_Switch_Start_Status")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Direction_Command = message->GetSignal("INV_Direction_Command")->GetResult();
+                inverter_report_msg_.INV_Inverter_Enable_State = message->GetSignal("INV_Inverter_Enable_State")->GetResult();
+                inverter_report_msg_.INV_Relay_3_Status = message->GetSignal("INV_Relay_3_Status")->GetResult();
+                inverter_report_msg_.INV_Relay_4_Status = message->GetSignal("INV_Relay_4_Status")->GetResult();
+                inverter_report_msg_.INV_Relay_2_Status = message->GetSignal("INV_Relay_2_Status")->GetResult();
+                inverter_report_msg_.INV_Inverter_Run_Mode = message->GetSignal("INV_Inverter_Run_Mode")->GetResult();
+                inverter_report_msg_.INV_Inverter_Command_Mode = message->GetSignal("INV_Inverter_Command_Mode")->GetResult();
+                inverter_report_msg_.INV_Relay_1_Status = message->GetSignal("INV_Relay_1_Status")->GetResult();
+                inverter_report_msg_.INV_Inverter_State = message->GetSignal("INV_Inverter_State")->GetResult();
+                inverter_report_msg_.INV_VSM_State = message->GetSignal("INV_VSM_State")->GetResult();
+                inverter_report_msg_.INV_Inverter_Enable_Lockout = message->GetSignal("INV_Inverter_Enable_Lockout")->GetResult();
+                inverter_report_msg_.INV_Inverter_Discharge_State = message->GetSignal("INV_Inverter_Discharge_State")->GetResult();
+                inverter_report_msg_.INV_Relay_5_Status = message->GetSignal("INV_Relay_5_Status")->GetResult();
+                inverter_report_msg_.INV_Relay_6_Status = message->GetSignal("INV_Relay_6_Status")->GetResult();
+                inverter_report_msg_.INV_BMS_Active = message->GetSignal("INV_BMS_Active")->GetResult();
+                inverter_report_msg_.INV_BMS_Torque_Limiting = message->GetSignal("INV_BMS_Torque_Limiting")->GetResult();
+                inverter_report_msg_.INV_PWM_Frequency = message->GetSignal("INV_PWM_Frequency")->GetResult();
+                inverter_report_msg_.INV_Limit_Max_Speed = message->GetSignal("INV_Limit_Max_Speed")->GetResult();
+                inverter_report_msg_.INV_Limit_Hot_Spot = message->GetSignal("INV_Limit_Hot_Spot")->GetResult();
+                inverter_report_msg_.INV_Low_Speed_Limiting = message->GetSignal("INV_Low_Speed_Limiting")->GetResult();
+                inverter_report_msg_.INV_Rolling_Counter = message->GetSignal("INV_Rolling_Counter")->GetResult();
+                inverter_report_msg_.INV_Limit_Coolant_Derating = message->GetSignal("INV_Limit_Coolant_Derating")->GetResult();
+                inverter_report_msg_.INV_Self_Sensing_Assist_Enable = message->GetSignal("INV_Self_Sensing_Assist_Enable")->GetResult();
+                inverter_report_msg_.INV_Limit_Stall_Burst_Model = message->GetSignal("INV_Limit_Stall_Burst_Model")->GetResult();
+                inverter_report_msg_.INV_Burst_Model_Mode = message->GetSignal("INV_Burst_Model_Mode")->GetResult();
+                inverter_report_msg_.INV_Key_Switch_Start_Status = message->GetSignal("INV_Key_Switch_Start_Status")->GetResult();
+            }
         }
         break;
 
       case INTERNAL_VOLTAGES:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(169);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::InternalVoltages out;
-            // out.header.stamp = msg->header.stamp;
-            // out.ref_voltage_12_0 = message->GetSignal("INV_Ref_Voltage_12_0")->GetResult();
-            // out.ref_voltage_5_0 = message->GetSignal("INV_Ref_Voltage_5_0")->GetResult();
-            // out.ref_voltage_2_5 = message->GetSignal("INV_Ref_Voltage_2_5")->GetResult();
-            // out.ref_voltage_1_5 = message->GetSignal("INV_Ref_Voltage_1_5")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Ref_Voltage_12_0 = message->GetSignal("INV_Ref_Voltage_12_0")->GetResult();
+                inverter_report_msg_.INV_Ref_Voltage_5_0 = message->GetSignal("INV_Ref_Voltage_5_0")->GetResult();
+                inverter_report_msg_.INV_Ref_Voltage_2_5 = message->GetSignal("INV_Ref_Voltage_2_5")->GetResult();
+                inverter_report_msg_.INV_Ref_Voltage_1_5 = message->GetSignal("INV_Ref_Voltage_1_5")->GetResult();
+            }
         }
         break;
 
       case FLUX_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(168);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::FluxID_IQ_Info out;
-            // out.header.stamp = msg->header.stamp;
-            // out.iq = message->GetSignal("INV_Iq")->GetResult();
-            // out.id = message->GetSignal("INV_Id")->GetResult();
-            // out.vq_ff = message->GetSignal("INV_Vq_ff")->GetResult();
-            // out.vd_ff = message->GetSignal("INV_Vd_ff")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Iq = message->GetSignal("INV_Iq")->GetResult();
+                inverter_report_msg_.INV_Id = message->GetSignal("INV_Id")->GetResult();
+                inverter_report_msg_.INV_Vq_ff = message->GetSignal("INV_Vq_ff")->GetResult();
+                inverter_report_msg_.INV_Vd_ff = message->GetSignal("INV_Vd_ff")->GetResult();
+            }
         }
         break;
 
       case VOLTAGE_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(167);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::VoltageInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.vbc_vq_voltage = message->GetSignal("INV_VBC_Vq_Voltage")->GetResult();
-            // out.vab_vd_voltage = message->GetSignal("INV_VAB_Vd_Voltage")->GetResult();
-            // out.output_voltage = message->GetSignal("INV_Output_Voltage")->GetResult();
-            // out.dc_bus_voltage = message->GetSignal("INV_DC_Bus_Voltage")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_VBC_Vq_Voltage = message->GetSignal("INV_VBC_Vq_Voltage")->GetResult();
+                inverter_report_msg_.INV_VAB_Vd_Voltage = message->GetSignal("INV_VAB_Vd_Voltage")->GetResult();
+                inverter_report_msg_.INV_Output_Voltage = message->GetSignal("INV_Output_Voltage")->GetResult();
+                inverter_report_msg_.INV_DC_Bus_Voltage = message->GetSignal("INV_DC_Bus_Voltage")->GetResult();
+            }
         }
         break;
 
       case CURRENT_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(166);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::CurrentInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.dc_bus_current = message->GetSignal("INV_DC_Bus_Current")->GetResult();
-            // out.phase_c_current = message->GetSignal("INV_Phase_C_Current")->GetResult();
-            // out.phase_b_current = message->GetSignal("INV_Phase_B_Current")->GetResult();
-            // out.phase_a_current = message->GetSignal("INV_Phase_A_Current")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_DC_Bus_Current = message->GetSignal("INV_DC_Bus_Current")->GetResult();
+                inverter_report_msg_.INV_Phase_C_Current = message->GetSignal("INV_Phase_C_Current")->GetResult();
+                inverter_report_msg_.INV_Phase_B_Current = message->GetSignal("INV_Phase_B_Current")->GetResult();
+                inverter_report_msg_.INV_Phase_A_Current = message->GetSignal("INV_Phase_A_Current")->GetResult();
+            }
         }
         break;
 
       case MOTOR_POSITION:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(165);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::MotorPositionInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.delta_resolver_filtered = message->GetSignal("INV_Delta_Resolver_Filtered")->GetResult();
-            // out.electrical_output_frequency = message->GetSignal("INV_Electrical_Output_Frequency")->GetResult();
-            // out.motor_speed = message->GetSignal("INV_Motor_Speed")->GetResult();
-            // out.motor_angle_electrical = message->GetSignal("INV_Motor_Angle_Electrical")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Delta_Resolver_Filtered = message->GetSignal("INV_Delta_Resolver_Filtered")->GetResult();
+                inverter_report_msg_.INV_Electrical_Output_Frequency = message->GetSignal("INV_Electrical_Output_Frequency")->GetResult();
+                inverter_report_msg_.INV_Motor_Speed = message->GetSignal("INV_Motor_Speed")->GetResult();
+                inverter_report_msg_.INV_Motor_Angle_Electrical = message->GetSignal("INV_Motor_Angle_Electrical")->GetResult();
+            }
         }
         break;
 
       case DIGITAL_INPUT_STATUS:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(164);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::DigitalInputStatus out;
-            // out.header.stamp = msg->header.stamp;
-            // out.digital_input_5 = message->GetSignal("INV_Digital_Input_5")->GetResult();
-            // out.digital_input_4 = message->GetSignal("INV_Digital_Input_4")->GetResult();
-            // out.digital_input_3 = message->GetSignal("INV_Digital_Input_3")->GetResult();
-            // out.digital_input_2 = message->GetSignal("INV_Digital_Input_2")->GetResult();
-            // out.digital_input_1 = message->GetSignal("INV_Digital_Input_1")->GetResult();
-            // out.digital_input_6 = message->GetSignal("INV_Digital_Input_6")->GetResult();
-            // out.digital_input_7 = message->GetSignal("INV_Digital_Input_7")->GetResult();
-            // out.digital_input_8 = message->GetSignal("INV_Digital_Input_8")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Digital_Input_5 = message->GetSignal("INV_Digital_Input_5")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_4 = message->GetSignal("INV_Digital_Input_4")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_3 = message->GetSignal("INV_Digital_Input_3")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_2 = message->GetSignal("INV_Digital_Input_2")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_1 = message->GetSignal("INV_Digital_Input_1")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_6 = message->GetSignal("INV_Digital_Input_6")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_7 = message->GetSignal("INV_Digital_Input_7")->GetResult();
+                inverter_report_msg_.INV_Digital_Input_8 = message->GetSignal("INV_Digital_Input_8")->GetResult();
+            }
         }
         break;
 
       case ANALOG_INPUT_VOLTAGE:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(163);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::AnalogInputVoltages out;
-            // out.header.stamp = msg->header.stamp;
-            // out.analog_input_1 = message->GetSignal("INV_Analog_Input_1")->GetResult();
-            // out.analog_input_2 = message->GetSignal("INV_Analog_Input_2")->GetResult();
-            // out.analog_input_3 = message->GetSignal("INV_Analog_Input_3")->GetResult();
-            // out.analog_input_4 = message->GetSignal("INV_Analog_Input_4")->GetResult();
-            // out.analog_input_5 = message->GetSignal("INV_Analog_Input_5")->GetResult();
-            // out.analog_input_6 = message->GetSignal("INV_Analog_Input_6")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Analog_Input_1 = message->GetSignal("INV_Analog_Input_1")->GetResult();
+                inverter_report_msg_.INV_Analog_Input_2 = message->GetSignal("INV_Analog_Input_2")->GetResult();
+                inverter_report_msg_.INV_Analog_Input_3 = message->GetSignal("INV_Analog_Input_3")->GetResult();
+                inverter_report_msg_.INV_Analog_Input_4 = message->GetSignal("INV_Analog_Input_4")->GetResult();
+                inverter_report_msg_.INV_Analog_Input_5 = message->GetSignal("INV_Analog_Input_5")->GetResult();
+                inverter_report_msg_.INV_Analog_Input_6 = message->GetSignal("INV_Analog_Input_6")->GetResult();
+            }
         }
         break;
 
       case TEMP_SET_3:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(162);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::TemperatureSet3 out;
-            // out.header.stamp = msg->header.stamp;
-            // out.torque_shudder = message->GetSignal("INV_Torque_Shudder")->GetResult();
-            // out.motor_temp = message->GetSignal("INV_Motor_Temp")->GetResult();
-            // out.hot_spot_temp = message->GetSignal("INV_Hot_Spot_Temp")->GetResult();
-            // out.coolant_temp = message->GetSignal("INV_Coolant_Temp")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Torque_Shudder = message->GetSignal("INV_Torque_Shudder")->GetResult();
+                inverter_report_msg_.INV_Motor_Temp = message->GetSignal("INV_Motor_Temp")->GetResult();
+                inverter_report_msg_.INV_Hot_Spot_Temp = message->GetSignal("INV_Hot_Spot_Temp")->GetResult();
+                inverter_report_msg_.INV_Coolant_Temp = message->GetSignal("INV_Coolant_Temp")->GetResult();
+            }
         }
         break;
 
       case TEMP_SET_2:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(161);
-          if (msg->dlc >= message->GetDlc()) {
+          NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::TemperatureSet2 out;
-            // out.header.stamp = msg->header.stamp;
-            // out.rtd2_temperature = message->GetSignal("INV_RTD2_Temperature")->GetResult();
-            // out.rtd1_temperature = message->GetSignal("INV_RTD1_Temperature")->GetResult();
-            // out.control_board_temp = message->GetSignal("INV_Control_Board_Temp")->GetResult();
-            // out.stall_burst_model_temp = message->GetSignal("INV_Stall_Burst_Model_Temp")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_RTD2_Temperature = message->GetSignal("INV_RTD2_Temperature")->GetResult();
+                inverter_report_msg_.INV_RTD1_Temperature = message->GetSignal("INV_RTD1_Temperature")->GetResult();
+                inverter_report_msg_.INV_Control_Board_Temp = message->GetSignal("INV_Control_Board_Temp")->GetResult();
+                inverter_report_msg_.INV_Stall_Burst_Model_Temp = message->GetSignal("INV_Stall_Burst_Model_Temp")->GetResult();
+            }
         }
         break;
 
       case TEMP_SET_1:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(160);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::TemperatureSet1 out;
-            // out.header.stamp = msg->header.stamp;
-            // out.gate_driver_board_temp = message->GetSignal("INV_Gate_Driver_Board_Temp")->GetResult();
-            // out.module_c_temp = message->GetSignal("INV_Module_C_Temp")->GetResult();
-            // out.module_b_temp = message->GetSignal("INV_Module_B_Temp")->GetResult();
-            // out.module_a_temp = message->GetSignal("INV_Module_A_Temp")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Gate_Driver_Board_Temp = message->GetSignal("INV_Gate_Driver_Board_Temp")->GetResult();
+                inverter_report_msg_.INV_Module_C_Temp = message->GetSignal("INV_Module_C_Temp")->GetResult();
+                inverter_report_msg_.INV_Module_B_Temp = message->GetSignal("INV_Module_B_Temp")->GetResult();
+                inverter_report_msg_.INV_Module_A_Temp = message->GetSignal("INV_Module_A_Temp")->GetResult();
+            }
         }
         break;
 
       case FIRMWARE_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(174);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::FirmwareInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.project_code_eep_ver = message->GetSignal("INV_Project_Code_EEP_Ver")->GetResult();
-            // out.sw_version = message->GetSignal("INV_SW_Version")->GetResult();
-            // out.datecode_mmdd = message->GetSignal("INV_DateCode_MMDD")->GetResult();
-            // out.datecode_yyyy = message->GetSignal("INV_DateCode_YYYY")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Project_Code_EEP_Ver = message->GetSignal("INV_Project_Code_EEP_Ver")->GetResult();
+                inverter_report_msg_.INV_SW_Version = message->GetSignal("INV_SW_Version")->GetResult();
+                inverter_report_msg_.INV_DateCode_MMDD = message->GetSignal("INV_DateCode_MMDD")->GetResult();
+                inverter_report_msg_.INV_DateCode_YYYY = message->GetSignal("INV_DateCode_YYYY")->GetResult();
+            }
         }
         break;
 
       case DIAGNOSTIC_DATA_MSGS:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(175);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::DiagDataMessage out;
-            // out.header.stamp = msg->header.stamp;
-            // out.diag_record = message->GetSignal("INV_Diag_Record")->GetResult();
-            // out.diag_segment = message->GetSignal("INV_Diag_Segment")->GetResult();
-            // out.diag_gamma_resolver = message->GetSignal("INV_Diag_Gamma_Resolver")->GetResult();
-            // out.diag_gamma_observer = message->GetSignal("INV_Diag_Gamma_Observer")->GetResult();
-            // out.diag_sin_used = message->GetSignal("INV_Diag_Sin_Used")->GetResult();
-            // out.diag_cos_used = message->GetSignal("INV_Diag_Cos_Used")->GetResult();
-            // out.diag_ia = message->GetSignal("INV_Diag_Ia")->GetResult();
-            // out.diag_ib = message->GetSignal("INV_Diag_Ib")->GetResult();
-            // out.diag_ic = message->GetSignal("INV_Diag_Ic")->GetResult();
-            // out.diag_vdc = message->GetSignal("INV_Diag_Vdc")->GetResult();
-            // out.diag_iq_cmd = message->GetSignal("INV_Diag_Iq_cmd")->GetResult();
-            // out.diag_id_cmd = message->GetSignal("INV_Diag_Id_cmd")->GetResult();
-            // out.diag_mod_index = message->GetSignal("INV_Diag_Mod_Index")->GetResult();
-            // out.diag_fw_output = message->GetSignal("INV_Diag_FW_Output")->GetResult();
-            // out.diag_vq_cmd = message->GetSignal("INV_Diag_Vq_Cmd")->GetResult();
-            // out.diag_vd_cmd = message->GetSignal("INV_Diag_Vd_Cmd")->GetResult();
-            // out.diag_vqs_cmd = message->GetSignal("INV_Diag_Vqs_Cmd")->GetResult();
-            // out.diag_pwm_freq = message->GetSignal("INV_Diag_PWM_Freq")->GetResult();
-            // out.diag_run_faults_lo = message->GetSignal("INV_Diag_Run_Faults_Lo")->GetResult();
-            // out.diag_run_faults_hi = message->GetSignal("INV_Diag_Run_Faults_Hi")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Diag_Record = message->GetSignal("INV_Diag_Record")->GetResult();
+                inverter_report_msg_.INV_Diag_Segment = message->GetSignal("INV_Diag_Segment")->GetResult();
+                inverter_report_msg_.INV_Diag_Gamma_Resolver = message->GetSignal("INV_Diag_Gamma_Resolver")->GetResult();
+                inverter_report_msg_.INV_Diag_Gamma_Observer = message->GetSignal("INV_Diag_Gamma_Observer")->GetResult();
+                inverter_report_msg_.INV_Diag_Sin_Used = message->GetSignal("INV_Diag_Sin_Used")->GetResult();
+                inverter_report_msg_.INV_Diag_Cos_Used = message->GetSignal("INV_Diag_Cos_Used")->GetResult();
+                inverter_report_msg_.INV_Diag_Ia = message->GetSignal("INV_Diag_Ia")->GetResult();
+                inverter_report_msg_.INV_Diag_Ib = message->GetSignal("INV_Diag_Ib")->GetResult();
+                inverter_report_msg_.INV_Diag_Ic = message->GetSignal("INV_Diag_Ic")->GetResult();
+                inverter_report_msg_.INV_Diag_Vdc = message->GetSignal("INV_Diag_Vdc")->GetResult();
+                inverter_report_msg_.INV_Diag_Iq_cmd = message->GetSignal("INV_Diag_Iq_cmd")->GetResult();
+                inverter_report_msg_.INV_Diag_Id_cmd = message->GetSignal("INV_Diag_Id_cmd")->GetResult();
+                inverter_report_msg_.INV_Diag_Mod_Index = message->GetSignal("INV_Diag_Mod_Index")->GetResult();
+                inverter_report_msg_.INV_Diag_FW_Output = message->GetSignal("INV_Diag_FW_Output")->GetResult();
+                inverter_report_msg_.INV_Diag_Vq_Cmd = message->GetSignal("INV_Diag_Vq_Cmd")->GetResult();
+                inverter_report_msg_.INV_Diag_Vd_Cmd = message->GetSignal("INV_Diag_Vd_Cmd")->GetResult();
+                inverter_report_msg_.INV_Diag_Vqs_Cmd = message->GetSignal("INV_Diag_Vqs_Cmd")->GetResult();
+                inverter_report_msg_.INV_Diag_PWM_Freq = message->GetSignal("INV_Diag_PWM_Freq")->GetResult();
+                inverter_report_msg_.INV_Diag_Run_Faults_Lo = message->GetSignal("INV_Diag_Run_Faults_Lo")->GetResult();
+                inverter_report_msg_.INV_Diag_Run_Faults_Hi = message->GetSignal("INV_Diag_Run_Faults_Hi")->GetResult();
+            }
         }
         break;
 
       case FAST_INFO:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(176);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::FastInfo out;
-            // out.header.stamp = msg->header.stamp;
-            // out.fast_torque_command = message->GetSignal("INV_Fast_Torque_Command")->GetResult();
-            // out.fast_torque_feedback = message->GetSignal("INV_Fast_Torque_Feedback")->GetResult();
-            // out.fast_motor_speed = message->GetSignal("INV_Fast_Motor_Speed")->GetResult();
-            // out.fast_dc_bus_voltage = message->GetSignal("INV_Fast_DC_Bus_Voltage")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Fast_Torque_Command = message->GetSignal("INV_Fast_Torque_Command")->GetResult();
+                inverter_report_msg_.INV_Fast_Torque_Feedback = message->GetSignal("INV_Fast_Torque_Feedback")->GetResult();
+                inverter_report_msg_.INV_Fast_Motor_Speed = message->GetSignal("INV_Fast_Motor_Speed")->GetResult();
+                inverter_report_msg_.INV_Fast_DC_Bus_Voltage = message->GetSignal("INV_Fast_DC_Bus_Voltage")->GetResult();
+            }
         }
         break;
 
       case TORQUE_CAPABILITY:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(177);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::TorqueCapability out;
-            // out.header.stamp = msg->header.stamp;
-            // out.torque_capability = message->GetSignal("INV_Torque_Capability")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.INV_Torque_Capability = message->GetSignal("INV_Torque_Capability")->GetResult();
+            }
         }
         break;
         
       case CURRENT_LIMIT:
         {
-         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(514);
-          if (msg->dlc >= message->GetDlc()) {
+         NewEagle::DbcMessage* message = dbwDbc_can0_.GetMessageById(msg->id);
+            if (msg->dlc >= message->GetDlc()) {
+                message->SetFrame(msg);
 
-            message->SetFrame(msg);
-
-            // vm_msgs::msg::CurrentLimit out;
-            // out.header.stamp = msg->header.stamp;
-            // out.max_discharge_current = message->GetSignal("BMS_Max_Discharge_Current")->GetResult();
-            // out.max_charge_current = message->GetSignal("BMS_Max_Charge_Current")->GetResult();
-            // pub_inverter_report_->publish(out);
-          }
+                inverter_report_msg_.BMS_Max_Discharge_Current = message->GetSignal("BMS_Max_Discharge_Current")->GetResult();
+                inverter_report_msg_.BMS_Max_Charge_Current = message->GetSignal("BMS_Max_Charge_Current")->GetResult();
+            }
         }
         break;
         
