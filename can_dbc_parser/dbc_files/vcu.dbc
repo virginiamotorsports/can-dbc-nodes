@@ -31,339 +31,339 @@ BS_:
 
 BU_: VCU
 
-BO_ 77823936 M100_VCU_States1: 8 VCU
- SG_ Run_Mode_State : 8|2@1+ (1,0) [0|3] "" VCU
- SG_ Drive_Mode_State : 10|4@1+ (1,0) [0|15] "" VCU
- SG_ Run_Time : 14|10@1+ (1,0) [0|1023] "s" VCU
- SG_ Stop_Command_State : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ Start_Command_State : 17|1@1+ (1,0) [0|1] "" VCU
- SG_ OPState : 18|6@1+ (1,0) [0|63] "" VCU
- SG_ MC2DischargeCmd : 24|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1DischargeCmd : 25|1@1+ (1,0) [0|1] "" VCU
- SG_ MCPower : 26|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4Enable : 27|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3Enable : 28|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2Enable : 29|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1Enable : 30|1@1+ (1,0) [0|1] "" VCU
- SG_ Start_Safe : 31|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3ContEnable : 32|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2ContEnable : 33|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1ContEnable : 34|1@1+ (1,0) [0|1] "" VCU
- SG_ PumpCont_XCheck : 35|1@1+ (1,0) [0|1] "" VCU
- SG_ HVIL_Charge : 36|1@1+ (1,0) [0|1] "" VCU
- SG_ HVIL_Main : 37|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4DischargeCmd : 38|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3DischargeCmd : 39|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_PosFB : 40|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_NegFB : 41|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_HVDetect : 42|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_DCVoltageSafeState : 43|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_DCVoltageSafeState : 44|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_DCVoltageSafeState : 45|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_DCVoltageSafeState : 46|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4ContEnable : 47|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_PosFB : 48|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_NegFB : 49|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_HVDetect : 50|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_PreChgFB : 51|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_PosFB : 52|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_NegFB : 53|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_HVDetect : 54|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_PreChgFB : 55|1@1+ (1,0) [0|1] "" VCU
- SG_ Performance_Level : 56|3@1+ (1,0) [0|7] "" VCU
- SG_ MC4_PreChgFB : 59|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_PosFB : 60|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_NegFB : 61|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_HVDetect : 62|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_PreChgFB : 63|1@1+ (1,0) [0|1] "" VCU
+BO_ 2196807680 M100_VCU_States1: 8 VCU
+ SG_ Run_Mode_State : 9|2@0+ (1,0) [0|3] ""  VCU
+ SG_ Drive_Mode_State : 13|4@0+ (1,0) [0|15] ""  VCU
+ SG_ Run_Time : 7|10@0+ (1,0) [0|1023] "s"  VCU
+ SG_ Stop_Command_State : 16|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Start_Command_State : 17|1@0+ (1,0) [0|1] ""  VCU
+ SG_ OPState : 23|6@0+ (1,0) [0|63] ""  VCU
+ SG_ MC2DischargeCmd : 24|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1DischargeCmd : 25|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MCPower : 26|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4Enable : 27|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3Enable : 28|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2Enable : 29|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1Enable : 30|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Start_Safe : 31|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3ContEnable : 32|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2ContEnable : 33|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1ContEnable : 34|1@0+ (1,0) [0|1] ""  VCU
+ SG_ PumpCont_XCheck : 35|1@0+ (1,0) [0|1] ""  VCU
+ SG_ HVIL_Charge : 36|1@0+ (1,0) [0|1] ""  VCU
+ SG_ HVIL_Main : 37|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4DischargeCmd : 38|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3DischargeCmd : 39|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_PosFB : 40|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_NegFB : 41|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_HVDetect : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_DCVoltageSafeState : 43|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_DCVoltageSafeState : 44|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_DCVoltageSafeState : 45|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_DCVoltageSafeState : 46|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4ContEnable : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_PosFB : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_NegFB : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_HVDetect : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_PreChgFB : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_PosFB : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_NegFB : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_HVDetect : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_PreChgFB : 55|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Performance_Level : 58|3@0+ (1,0) [0|7] ""  VCU
+ SG_ MC4_PreChgFB : 59|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_PosFB : 60|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_NegFB : 61|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_HVDetect : 62|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_PreChgFB : 63|1@0+ (1,0) [0|1] ""  VCU
 
-BO_ 77823938 M102_VCU_States2: 8 VCU
- SG_ VCU_12V_Input : 0|8@1+ (0.1,0) [0|25.5] "V" VCU
- SG_ MC1_PreChg_Cmd : 8|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_Pos_Cmd : 9|1@1+ (1,0) [0|1] "" VCU
- SG_ VCU_5V_Output : 10|6@1+ (0.1,0) [0|6.3] "V" VCU
- SG_ MC4_Pos_Cmd : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_PreChgComplete : 17|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_PreChg_Cmd : 18|1@1+ (1,0) [0|1] "" VCU
- SG_ MC3_Pos_Cmd : 19|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_PreChgComplete : 20|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_PreChg_Cmd : 21|1@1+ (1,0) [0|1] "" VCU
- SG_ MC2_Pos_Cmd : 22|1@1+ (1,0) [0|1] "" VCU
- SG_ MC1_PreChgComplete : 23|1@1+ (1,0) [0|1] "" VCU
- SG_ SpeedMode_Allowed : 24|1@1+ (1,0) [0|1] "" VCU
- SG_ InvControl_Mode : 25|1@1+ (1,0) [0|1] "" VCU
- SG_ Launch_Mode : 26|1@1+ (1,0) [0|1] "" VCU
- SG_ Burnout_Mode : 27|1@1+ (1,0) [0|1] "" VCU
- SG_ Idle_Mode : 28|1@1+ (1,0) [0|1] "" VCU
- SG_ Creep_Mode : 29|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_PreChgComplete : 30|1@1+ (1,0) [0|1] "" VCU
- SG_ MC4_PreChg_Cmd : 31|1@1+ (1,0) [0|1] "" VCU
- SG_ LineLock_Cntrl : 32|1@1+ (1,0) [0|1] "" VCU
- SG_ TransBrake_Cntrl : 33|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_Pump_Wake : 34|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_Pump2_Cntrl : 35|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_Pump1_Cntrl : 36|1@1+ (1,0) [0|1] "" VCU
- SG_ OilPump1_On : 37|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_Fan2_On : 38|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_Fan1_On : 39|1@1+ (1,0) [0|1] "" VCU
- SG_ Cool_PumpSpdTarget : 40|8@1+ (25,0) [0|6375] "rpm" VCU
- SG_ Brake_LampsCntrl : 48|1@1+ (1,0) [0|1] "" VCU
- SG_ TransBrake_Switch : 49|1@1+ (1,0) [0|1] "" VCU
- SG_ LineLock_Switch : 50|1@1+ (1,0) [0|1] "" VCU
- SG_ Inertia_Switch : 51|1@1+ (1,0) [0|1] "" VCU
- SG_ IMDState : 52|1@1+ (1,0) [0|1] "" VCU
- SG_ ShiftSol_Cntrl : 53|1@1+ (1,0) [0|1] "" VCU
- SG_ Shift_Sol2 : 54|1@1+ (1,0) [0|1] "" VCU
- SG_ Shift_Sol1 : 55|1@1+ (1,0) [0|1] "" VCU
- SG_ Contactors_Enabled : 56|1@1+ (1,0) [0|1] "" VCU
- SG_ ChargeContactorCntrl : 57|1@1+ (1,0) [0|1] "" VCU
- SG_ Acc_PowerCntrl : 58|1@1+ (1,0) [0|1] "" VCU
- SG_ Acc_LightCntrl : 59|1@1+ (1,0) [0|1] "" VCU
- SG_ ReverseLamps_Cntrl : 60|1@1+ (1,0) [0|1] "" VCU
- SG_ ParkLamps_Cntrl : 61|1@1+ (1,0) [0|1] "" VCU
- SG_ HVSafetyLight_Cntrl : 62|1@1+ (1,0) [0|1] "" VCU
- SG_ Head_LampsCntrl : 63|1@1+ (1,0) [0|1] "" VCU
+BO_ 2196807682 M102_VCU_States2: 8 VCU
+ SG_ VCU_12V_Input : 7|8@0+ (0.1,0) [0|25.5] "V"  VCU
+ SG_ MC1_PreChg_Cmd : 8|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_Pos_Cmd : 9|1@0+ (1,0) [0|1] ""  VCU
+ SG_ VCU_5V_Output : 15|6@0+ (0.1,0) [0|6.3] "V"  VCU
+ SG_ MC4_Pos_Cmd : 16|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_PreChgComplete : 17|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_PreChg_Cmd : 18|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC3_Pos_Cmd : 19|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_PreChgComplete : 20|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_PreChg_Cmd : 21|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC2_Pos_Cmd : 22|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC1_PreChgComplete : 23|1@0+ (1,0) [0|1] ""  VCU
+ SG_ SpeedMode_Allowed : 24|1@0+ (1,0) [0|1] ""  VCU
+ SG_ InvControl_Mode : 25|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Launch_Mode : 26|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Burnout_Mode : 27|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Idle_Mode : 28|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Creep_Mode : 29|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_PreChgComplete : 30|1@0+ (1,0) [0|1] ""  VCU
+ SG_ MC4_PreChg_Cmd : 31|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LineLock_Cntrl : 32|1@0+ (1,0) [0|1] ""  VCU
+ SG_ TransBrake_Cntrl : 33|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_Pump_Wake : 34|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_Pump2_Cntrl : 35|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_Pump1_Cntrl : 36|1@0+ (1,0) [0|1] ""  VCU
+ SG_ OilPump1_On : 37|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_Fan2_On : 38|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_Fan1_On : 39|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cool_PumpSpdTarget : 47|8@0+ (25,0) [0|6375] "rpm"  VCU
+ SG_ Brake_LampsCntrl : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ TransBrake_Switch : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LineLock_Switch : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Inertia_Switch : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IMDState : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ ShiftSol_Cntrl : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Shift_Sol2 : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Shift_Sol1 : 55|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Contactors_Enabled : 56|1@0+ (1,0) [0|1] ""  VCU
+ SG_ ChargeContactorCntrl : 57|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Acc_PowerCntrl : 58|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Acc_LightCntrl : 59|1@0+ (1,0) [0|1] ""  VCU
+ SG_ ReverseLamps_Cntrl : 60|1@0+ (1,0) [0|1] ""  VCU
+ SG_ ParkLamps_Cntrl : 61|1@0+ (1,0) [0|1] ""  VCU
+ SG_ HVSafetyLight_Cntrl : 62|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Head_LampsCntrl : 63|1@0+ (1,0) [0|1] ""  VCU
 
-BO_ 77823940 M104_VCU_States3: 8 VCU
- SG_ LimMult_MC1Temp_Active : 0|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC1Curr_Active : 1|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Launch_Time_Active : 2|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_DriveShaft_Spd_Active : 3|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_CellVolt_Min_Active : 4|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_CellVolt_Max_Active : 5|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Batt_SOC_Active : 6|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Batt_DCL_Active : 7|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor1_Temp_Active : 8|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor1_SpdLo_Active : 9|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC4Temp_Active : 10|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC4Curr_Active : 11|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC3Temp_Active : 12|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC3Curr_Active : 13|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC2Temp_Active : 14|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC2Curr_Active : 15|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Pack_Current_Active : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Over_rev_Active : 17|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor4_Temp_Active : 18|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor4_SpdLo_Active : 19|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor3_Temp_Active : 20|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor3_SpdLo_Active : 21|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor2_Temp_Active : 22|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Motor2_SpdLo_Active : 23|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Shift5_Tq_Active : 24|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Shift4_Tq_Active : 25|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Shift3_Tq_Active : 26|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Shift2_Tq_Active : 27|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Shift1_Tq_Active : 28|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Pack_Voltage_Active : 29|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Pack_TempLo_Active : 30|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_Pack_TempHi_Active : 31|1@1+ (1,0) [0|1] "" VCU
- SG_ LaunchTimer_Running : 33|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC4CurrRamp_Active : 34|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC3CurrRamp_Active : 35|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC2CurrRamp_Active : 36|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_MC1CurrRamp_Active : 37|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_VehSpd_Lo_Active : 38|1@1+ (1,0) [0|1] "" VCU
- SG_ LimMult_VehSpd_Hi_Active : 39|1@1+ (1,0) [0|1] "" VCU
- SG_ LaunchRamp_Time : 40|8@1+ (0.1,0) [0|25.5] "s" VCU
- SG_ Run_Time_Counter : 56|16@1+ (1,0) [0|65535] "s" VCU
+BO_ 2196807684 M104_VCU_States3: 8 VCU
+ SG_ LimMult_MC1Temp_Active : 0|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC1Curr_Active : 1|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Launch_Time_Active : 2|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_DriveShaft_Spd_Active : 3|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_CellVolt_Min_Active : 4|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_CellVolt_Max_Active : 5|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Batt_SOC_Active : 6|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Batt_DCL_Active : 7|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor1_Temp_Active : 8|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor1_SpdLo_Active : 9|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC4Temp_Active : 10|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC4Curr_Active : 11|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC3Temp_Active : 12|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC3Curr_Active : 13|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC2Temp_Active : 14|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC2Curr_Active : 15|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Pack_Current_Active : 16|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Over_rev_Active : 17|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor4_Temp_Active : 18|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor4_SpdLo_Active : 19|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor3_Temp_Active : 20|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor3_SpdLo_Active : 21|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor2_Temp_Active : 22|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Motor2_SpdLo_Active : 23|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Shift5_Tq_Active : 24|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Shift4_Tq_Active : 25|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Shift3_Tq_Active : 26|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Shift2_Tq_Active : 27|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Shift1_Tq_Active : 28|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Pack_Voltage_Active : 29|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Pack_TempLo_Active : 30|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_Pack_TempHi_Active : 31|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LaunchTimer_Running : 33|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC4CurrRamp_Active : 34|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC3CurrRamp_Active : 35|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC2CurrRamp_Active : 36|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_MC1CurrRamp_Active : 37|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_VehSpd_Lo_Active : 38|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LimMult_VehSpd_Hi_Active : 39|1@0+ (1,0) [0|1] ""  VCU
+ SG_ LaunchRamp_Time : 47|8@0+ (0.1,0) [0|25.5] "s"  VCU
+ SG_ Run_Time_Counter : 55|16@0+ (1,0) [0|65535] "s"  VCU
 
-BO_ 77823942 M106_DriverInputs1: 8 VCU
- SG_ AccelPedal : 0|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ AccelPedal1 : 8|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ AccelPedal2 : 16|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ AccelPedalXCheckDiff : 24|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ Start_Switch : 32|1@1+ (1,0) [0|1] "" VCU
- SG_ Ignition_Switch : 33|1@1+ (1,0) [0|1] "" VCU
- SG_ Brake_Switch2 : 34|1@1+ (1,0) [0|1] "" VCU
- SG_ Brake_Switch1 : 35|1@1+ (1,0) [0|1] "" VCU
- SG_ Brake_Switch : 36|1@1+ (1,0) [0|1] "" VCU
- SG_ AccelPedal2Valid : 37|1@1+ (1,0) [0|1] "" VCU
- SG_ AccelPedal1Valid : 38|1@1+ (1,0) [0|1] "" VCU
- SG_ AccelPedalValid : 39|1@1+ (1,0) [0|1] "" VCU
- SG_ Manual_Regen : 40|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ Manual_Regen1 : 48|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ Manual_Regen2 : 56|8@1+ (0.392157,0) [0|99.9999993] "" VCU
+BO_ 2196807686 M106_DriverInputs1: 8 VCU
+ SG_ AccelPedal : 7|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ AccelPedal1 : 15|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ AccelPedal2 : 23|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ AccelPedalXCheckDiff : 31|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ Start_Switch : 32|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Ignition_Switch : 33|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Brake_Switch2 : 34|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Brake_Switch1 : 35|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Brake_Switch : 36|1@0+ (1,0) [0|1] ""  VCU
+ SG_ AccelPedal2Valid : 37|1@0+ (1,0) [0|1] ""  VCU
+ SG_ AccelPedal1Valid : 38|1@0+ (1,0) [0|1] ""  VCU
+ SG_ AccelPedalValid : 39|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Manual_Regen : 47|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ Manual_Regen1 : 55|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ Manual_Regen2 : 63|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
 
-BO_ 77823944 M108_DriverInputs2: 8 VCU
- SG_ ManRegen_XCheckDiff : 0|8@1+ (0.392157,0) [0|99.9999993] "" VCU
- SG_ ParkLamp_Switch : 8|1@1+ (1,0) [0|1] "" VCU
- SG_ Head_LampSwitch : 9|1@1+ (1,0) [0|1] "" VCU
- SG_ Reverse_Switch : 10|1@1+ (1,0) [0|1] "" VCU
- SG_ Drive_Switch : 11|1@1+ (1,0) [0|1] "" VCU
- SG_ Neutral_Switch : 12|1@1+ (1,0) [0|1] "" VCU
- SG_ Park_Switch : 13|1@1+ (1,0) [0|1] "" VCU
- SG_ Manual_Regen2Valid : 14|1@1+ (1,0) [0|1] "" VCU
- SG_ Manual_Regen1Valid : 15|1@1+ (1,0) [0|1] "" VCU
- SG_ Logging_Switch : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ Wake_Switch : 17|1@1+ (1,0) [0|1] "" VCU
- SG_ Acc_LightSwitch : 18|1@1+ (1,0) [0|1] "" VCU
- SG_ ACSwitch : 19|1@1+ (1,0) [0|1] "" VCU
- SG_ HeaterSwitch : 20|1@1+ (1,0) [0|1] "" VCU
- SG_ Cooling_PumpOrdSwitch : 21|1@1+ (1,0) [0|1] "" VCU
- SG_ Cooling_FanOrdSwitch : 22|1@1+ (1,0) [0|1] "" VCU
- SG_ Enable_Switch : 23|1@1+ (1,0) [0|1] "" VCU
- SG_ CCSetCst : 28|1@1+ (1,0) [0|1] "" VCU
- SG_ CCRsmAcc : 29|1@1+ (1,0) [0|1] "" VCU
- SG_ CCOn : 30|1@1+ (1,0) [0|1] "" VCU
- SG_ CCCancel : 31|1@1+ (1,0) [0|1] "" VCU
+BO_ 2196807688 M108_DriverInputs2: 8 VCU
+ SG_ ManRegen_XCheckDiff : 7|8@0+ (0.392157,0) [0|99.9999993] ""  VCU
+ SG_ ParkLamp_Switch : 8|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Head_LampSwitch : 9|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Reverse_Switch : 10|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Drive_Switch : 11|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Neutral_Switch : 12|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Park_Switch : 13|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Manual_Regen2Valid : 14|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Manual_Regen1Valid : 15|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Logging_Switch : 16|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Wake_Switch : 17|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Acc_LightSwitch : 18|1@0+ (1,0) [0|1] ""  VCU
+ SG_ ACSwitch : 19|1@0+ (1,0) [0|1] ""  VCU
+ SG_ HeaterSwitch : 20|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cooling_PumpOrdSwitch : 21|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Cooling_FanOrdSwitch : 22|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Enable_Switch : 23|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCSetCst : 28|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCRsmAcc : 29|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCOn : 30|1@0+ (1,0) [0|1] ""  VCU
+ SG_ CCCancel : 31|1@0+ (1,0) [0|1] ""  VCU
 
-BO_ 77823954 M112_VehicleInputs1: 8 VCU
- SG_ Brake_Pressure : 8|16@1+ (0.1,0) [0|6553.5] "psi" VCU
- SG_ Transmission_Pressure : 24|16@1+ (0.1,0) [0|6553.5] "psi" VCU
- SG_ WheelBar_Press1 : 40|16@1+ (0.1,0) [0|6553.5] "psi" VCU
- SG_ WheelBar_Press2 : 56|16@1+ (0.1,0) [0|6553.5] "psi" VCU
+BO_ 2196807698 M112_VehicleInputs1: 8 VCU
+ SG_ Brake_Pressure : 7|16@0+ (0.1,0) [0|6553.5] "psi"  VCU
+ SG_ Transmission_Pressure : 23|16@0+ (0.1,0) [0|6553.5] "psi"  VCU
+ SG_ WheelBar_Press1 : 39|16@0+ (0.1,0) [0|6553.5] "psi"  VCU
+ SG_ WheelBar_Press2 : 55|16@0+ (0.1,0) [0|6553.5] "psi"  VCU
 
-BO_ 77823956 M114_VehicleInputs2: 8 VCU
- SG_ Transmission_Temp : 0|8@1+ (1,-50) [-50|205] "C" VCU
- SG_ Coolant_Temp1 : 8|8@1+ (1,0) [-128|127] "C" VCU
- SG_ Coolant_Temp2 : 16|8@1- (1,0) [-128|127] "C" VCU
- SG_ AmbientAirTemp : 24|8@1- (1,0) [-128|127] "C" VCU
- SG_ HeaterInletTemp : 32|8@1- (1,0) [-128|127] "C" VCU
- SG_ HeaterOutletTemp : 40|8@1- (1,0) [-128|127] "C" VCU
- SG_ ACPressure : 56|16@1+ (0.1,0) [0|6553.5] "psi" VCU
+BO_ 2196807700 M114_VehicleInputs2: 8 VCU
+ SG_ Transmission_Temp : 7|8@0+ (1,-50) [-50|205] "C"  VCU
+ SG_ Coolant_Temp1 : 15|8@0+ (1,0) [-128|127] "C"  VCU
+ SG_ Coolant_Temp2 : 23|8@0- (1,0) [-128|127] "C"  VCU
+ SG_ AmbientAirTemp : 31|8@0- (1,0) [-128|127] "C"  VCU
+ SG_ HeaterInletTemp : 39|8@0- (1,0) [-128|127] "C"  VCU
+ SG_ HeaterOutletTemp : 47|8@0- (1,0) [-128|127] "C"  VCU
+ SG_ ACPressure : 55|16@0+ (0.1,0) [0|6553.5] "psi"  VCU
 
-BO_ 77823958 M116_VehicleInputs3: 7 VCU
- SG_ BrakeVacPressure : 0|8@1+ (0.14504,-14.696) [-14.696|22.2892] "psi" VCU
- SG_ Vehicle_Speed : 8|8@1+ (1,0) [0|255] "mph" VCU
- SG_ DriveShaft_Speed : 24|16@1+ (1,0) [0|65535] "rpm" VCU
- SG_ DriveWheel_Speed : 32|8@1+ (1,0) [0|255] "mph" VCU
- SG_ Ground_WheelSpeed : 40|8@1+ (1,0) [0|255] "mph" VCU
- SG_ TC_Slip_Measured : 48|8@1+ (1,0) [0|255] "mph" VCU
+BO_ 2196807702 M116_VehicleInputs3: 7 VCU
+ SG_ BrakeVacPressure : 7|8@0+ (0.14504,-14.696) [-14.696|22.2892] "psi"  VCU
+ SG_ Vehicle_Speed : 15|8@0+ (1,0) [0|255] "mph"  VCU
+ SG_ DriveShaft_Speed : 23|16@0+ (1,0) [0|65535] "rpm"  VCU
+ SG_ DriveWheel_Speed : 39|8@0+ (1,0) [0|255] "mph"  VCU
+ SG_ Ground_WheelSpeed : 47|8@0+ (1,0) [0|255] "mph"  VCU
+ SG_ TC_Slip_Measured : 55|8@0+ (1,0) [0|255] "mph"  VCU
 
-BO_ 77823960 M118_VehicleInputs4: 4 VCU
- SG_ Vehicle_Odometer : 24|32@1+ (0.01,0) [0|42949672.95] "mi" VCU
+BO_ 2196807704 M118_VehicleInputs4: 4 VCU
+ SG_ Vehicle_Odometer : 7|32@0+ (0.01,0) [0|42949672.95] "mi"  VCU
 
-BO_ 77823968 M120_MotorTorqueData1: 8 VCU
- SG_ Motor1_Torque_Request : 12|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor1_TqLimHi : 16|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor1_TqLimLo : 36|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor1_TqTable : 40|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor1_TqLimMultHi : 48|8@1+ (0.005,0) [0|1.275] "frac" VCU
- SG_ Motor1_TqLimMultLo : 56|8@1+ (0.005,0) [0|1.275] "frac" VCU
+BO_ 2196807712 M120_MotorTorqueData1: 8 VCU
+ SG_ Motor1_Torque_Request : 7|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor1_TqLimHi : 11|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor1_TqLimLo : 31|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor1_TqTable : 35|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor1_TqLimMultHi : 55|8@0+ (0.005,0) [0|1.275] "frac"  VCU
+ SG_ Motor1_TqLimMultLo : 63|8@0+ (0.005,0) [0|1.275] "frac"  VCU
 
-BO_ 77823970 M122_MotorTorqueData2: 8 VCU
- SG_ Motor1_CreepTorque : 12|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor1_ReverseTorque : 16|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor1_TorqueTrimTable : 36|12@1- (0.001,0) [-2.048|2.047] "frac" VCU
- SG_ MotorTqSpd_FeedForward : 40|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ PedalTqMult_Tbl1 : 48|8@1- (1,0) [-128|127] "" VCU
- SG_ PedalTqMult_Tbl2 : 56|8@1- (1,0) [-128|127] "" VCU
+BO_ 2196807714 M122_MotorTorqueData2: 8 VCU
+ SG_ Motor1_CreepTorque : 7|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor1_ReverseTorque : 11|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor1_TorqueTrimTable : 31|12@0- (0.001,0) [-2.048|2.047] "frac"  VCU
+ SG_ MotorTqSpd_FeedForward : 35|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ PedalTqMult_Tbl1 : 55|8@0- (1,0) [-128|127] ""  VCU
+ SG_ PedalTqMult_Tbl2 : 63|8@0- (1,0) [-128|127] ""  VCU
 
-BO_ 77823972 M124_MotorTorqueData3: 8 VCU
- SG_ Motor2_TorqueRequest : 12|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor2_TqLimHi : 16|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor2_TqLimLo : 36|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor2_TqTable : 40|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor2_TqLimMultHi : 48|8@1+ (0.005,0) [0|1.275] "frac" VCU
- SG_ Motor2_TqLimMultLo : 56|8@1+ (0.005,0) [0|1.275] "frac" VCU
+BO_ 2196807716 M124_MotorTorqueData3: 8 VCU
+ SG_ Motor2_TorqueRequest : 7|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor2_TqLimHi : 11|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor2_TqLimLo : 31|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor2_TqTable : 35|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor2_TqLimMultHi : 55|8@0+ (0.005,0) [0|1.275] "frac"  VCU
+ SG_ Motor2_TqLimMultLo : 63|8@0+ (0.005,0) [0|1.275] "frac"  VCU
 
-BO_ 77823974 M126_MotorTorqueData4: 8 VCU
- SG_ Motor2_CreepTorque : 12|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor2_ReverseTorque : 16|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor2_TorqueTrimTable : 36|12@1- (0.001,0) [-2.048|2.047] "frac" VCU
- SG_ RegenBrake_Torque : 40|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ PedalTqMult_Tbl3 : 48|8@1- (1,0) [-128|127] "" VCU
- SG_ PedalTqMult_Tbl4 : 56|8@1- (1,0) [-128|127] "" VCU
+BO_ 2196807718 M126_MotorTorqueData4: 8 VCU
+ SG_ Motor2_CreepTorque : 7|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor2_ReverseTorque : 11|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor2_TorqueTrimTable : 31|12@0- (0.001,0) [-2.048|2.047] "frac"  VCU
+ SG_ RegenBrake_Torque : 35|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ PedalTqMult_Tbl3 : 55|8@0- (1,0) [-128|127] ""  VCU
+ SG_ PedalTqMult_Tbl4 : 63|8@0- (1,0) [-128|127] ""  VCU
 
-BO_ 77823976 M128_MotorTorqueData5: 8 VCU
- SG_ Motor3_TorqueRequest : 12|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor3_TqLimHi : 16|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor3_TqLimLo : 36|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor3_TqTable : 40|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor3_TqLimMultHi : 48|8@1+ (0.005,0) [0|1.275] "frac" VCU
- SG_ Motor3_TqLimMultLo : 56|8@1+ (0.005,0) [0|1.275] "frac" VCU
+BO_ 2196807720 M128_MotorTorqueData5: 8 VCU
+ SG_ Motor3_TorqueRequest : 7|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor3_TqLimHi : 11|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor3_TqLimLo : 31|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor3_TqTable : 35|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor3_TqLimMultHi : 55|8@0+ (0.005,0) [0|1.275] "frac"  VCU
+ SG_ Motor3_TqLimMultLo : 63|8@0+ (0.005,0) [0|1.275] "frac"  VCU
 
-BO_ 77823978 M130_MotorTorqueData6: 8 VCU
- SG_ Motor3_CreepTorque : 12|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor3_ReverseTorque : 16|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor3_TorqueTrimTable : 36|12@1- (0.001,0) [-2.048|2.047] "frac" VCU
- SG_ Motor4_TorqueRequest : 40|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
+BO_ 2196807728 M130_MotorTorqueData6: 8 VCU
+ SG_ Motor3_CreepTorque : 7|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor3_ReverseTorque : 11|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor3_TorqueTrimTable : 31|12@0- (0.001,0) [-2.048|2.047] "frac"  VCU
+ SG_ Motor4_TorqueRequest : 35|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
 
-BO_ 77823980 M132_MotorTorqueData7: 8 VCU
- SG_ Motor4_TqLimHi : 12|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor4_TqLimLo : 16|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ Motor4_TqTable : 36|12@1+ (0.5,0) [0|2047.5] "N.m" VCU
- SG_ Motor4_CreepTorque : 40|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor4_TqLimMultHi : 48|8@1+ (0.005,0) [0|1.275] "frac" VCU
- SG_ Motor4_TqLimMultLo : 56|8@1+ (0.005,0) [0|1.275] "frac" VCU
+BO_ 2196807730 M132_MotorTorqueData7: 8 VCU
+ SG_ Motor4_TqLimHi : 7|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor4_TqLimLo : 11|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ Motor4_TqTable : 31|12@0+ (0.5,0) [0|2047.5] "N.m"  VCU
+ SG_ Motor4_CreepTorque : 35|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor4_TqLimMultHi : 55|8@0+ (0.005,0) [0|1.275] "frac"  VCU
+ SG_ Motor4_TqLimMultLo : 63|8@0+ (0.005,0) [0|1.275] "frac"  VCU
 
-BO_ 77823982 M134_MotorTorqueData8: 8 VCU
- SG_ Motor4_ReverseTorque : 12|12@1+ (0.1,0) [0|409.5] "N.m" VCU
- SG_ Motor4_TorqueTrimTable : 16|12@1- (0.001,0) [-2.048|2.047] "frac" VCU
- SG_ Launch_Torque_Multiplier : 24|8@1+ (1,0) [0|255] "" VCU
- SG_ Launch_Torque_Time : 32|8@1+ (0.1,0) [0|25.5] "s" VCU
+BO_ 2196807732 M134_MotorTorqueData8: 8 VCU
+ SG_ Motor4_ReverseTorque : 7|12@0+ (0.1,0) [0|409.5] "N.m"  VCU
+ SG_ Motor4_TorqueTrimTable : 11|12@0- (0.001,0) [-2.048|2.047] "frac"  VCU
+ SG_ Launch_Torque_Multiplier : 31|8@0+ (1,0) [0|255] ""  VCU
+ SG_ Launch_Torque_Time : 39|8@0+ (0.1,0) [0|25.5] "s"  VCU
 
-BO_ 77823984 M136_MotorSpeedData1: 8 VCU
- SG_ IdleTarget_Speed : 8|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
- SG_ StartRamp_TargetSpeed : 24|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
- SG_ FreeRevTarget_Speed : 40|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
- SG_ BurnoutTargetSpeed : 56|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
+BO_ 2196807734 M136_MotorSpeedData1: 8 VCU
+ SG_ IdleTarget_Speed : 7|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
+ SG_ StartRamp_TargetSpeed : 23|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
+ SG_ FreeRevTarget_Speed : 39|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
+ SG_ BurnoutTargetSpeed : 55|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
 
-BO_ 77823986 M138_MotorSpeedData2: 8 VCU
- SG_ LaunchTarget_Speed : 8|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
- SG_ Motor_TargetSpeed : 24|16@1+ (0.25,0) [0|16383.75] "rpm" VCU
- SG_ SpeedControl_PID : 44|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ SpeedControl_PID_Error : 48|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
+BO_ 2196807736 M138_MotorSpeedData2: 8 VCU
+ SG_ LaunchTarget_Speed : 7|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
+ SG_ Motor_TargetSpeed : 23|16@0+ (0.25,0) [0|16383.75] "rpm"  VCU
+ SG_ SpeedControl_PID : 39|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ SpeedControl_PID_Error : 43|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
 
-BO_ 77823988 M140_MotorSpeedData3: 6 VCU
- SG_ SpeedControl_PID_PTerm : 12|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ SpeedControl_PID_ITerm : 16|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
- SG_ SpeedControl_PID_DTerm : 36|12@1- (0.5,0) [-1024|1023.5] "N.m" VCU
+BO_ 2196807744 M140_MotorSpeedData3: 6 VCU
+ SG_ SpeedControl_PID_PTerm : 7|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ SpeedControl_PID_ITerm : 11|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
+ SG_ SpeedControl_PID_DTerm : 31|12@0- (0.5,0) [-1024|1023.5] "N.m"  VCU
 
-BO_ 77823996 M144_VCU_FaultStates1: 7 VCU
- SG_ Fault_AccPedal2_Spike : 0|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccPedal2_InputLo : 1|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccPedal2_InputHi : 2|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccPedal1_Spike : 3|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccPedal1_Input_Lo : 4|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccPedal1_Input_Hi : 5|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Acc_Power : 6|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Acc_LED : 7|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cool_Temp1_InputLo : 8|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cool_Temp1_InputHi : 9|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cooling_Pump2 : 10|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cooling_Pump1 : 11|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Brk_Press_InputLo : 12|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Brk_Press_InputHi : 13|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Brake_Lamps : 14|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_AccelPedal_XCheck : 15|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC1SupplyVoltageLow : 16|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC1_Contactor : 17|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_IgnChgPlug_XCheck : 18|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Idle_Target : 19|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Head_Lamps : 20|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_DCVoltage_SafeLight : 21|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cool_Temp2_InputLo : 22|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Cool_Temp2_InputHi : 23|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_LineLock_Sol : 24|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC5SupplyVoltageLow : 25|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC4SupplyVoltageLow : 26|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC4_Contactor : 27|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC3SupplyVoltageLow : 28|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC3_Contactor : 29|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC2SupplyVoltageLow : 30|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_MC2_Contactor : 31|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Regen_LeverXChk : 32|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Park_Lamps : 33|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen2_Spike : 34|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen2_InputLo : 35|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen2_InputHi : 36|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen1_Spike : 37|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen1_InputLo : 38|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Manual_Regen1_InputHi : 39|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_WheelBar_Press1_InputHi : 40|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Trans_Temp_InputLo : 41|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Trans_Temp_InputHi : 42|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Trans_Press_InputLo : 43|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Trans_Press_InputHi : 44|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_TransBrk_Sol : 45|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Shift_Sol : 46|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Reverse_Lamps : 47|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Wheel_Speed_NR_Spike : 48|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Wheel_Speed_NL_Spike : 49|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Wheel_Speed_DR_Spike : 50|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Wheel_Speed_DL_Spike : 51|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_Wheel_Speed_DD_Spike : 52|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_WheelBar_Press2_InputLo : 53|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_WheelBar_Press2_InputHi : 54|1@1+ (1,0) [0|1] "" VCU
- SG_ Fault_WheelBar_Press1_InputLo : 55|1@1+ (1,0) [0|1] "" VCU
+BO_ 2196807748 M144_VCU_FaultStates1: 7 VCU
+ SG_ Fault_AccPedal2_Spike : 0|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccPedal2_InputLo : 1|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccPedal2_InputHi : 2|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccPedal1_Spike : 3|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccPedal1_Input_Lo : 4|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccPedal1_Input_Hi : 5|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Acc_Power : 6|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Acc_LED : 7|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cool_Temp1_InputLo : 8|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cool_Temp1_InputHi : 9|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cooling_Pump2 : 10|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cooling_Pump1 : 11|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Brk_Press_InputLo : 12|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Brk_Press_InputHi : 13|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Brake_Lamps : 14|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_AccelPedal_XCheck : 15|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC1SupplyVoltageLow : 16|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC1_Contactor : 17|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_IgnChgPlug_XCheck : 18|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Idle_Target : 19|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Head_Lamps : 20|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_DCVoltage_SafeLight : 21|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cool_Temp2_InputLo : 22|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Cool_Temp2_InputHi : 23|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_LineLock_Sol : 24|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC5SupplyVoltageLow : 25|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC4SupplyVoltageLow : 26|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC4_Contactor : 27|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC3SupplyVoltageLow : 28|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC3_Contactor : 29|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC2SupplyVoltageLow : 30|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_MC2_Contactor : 31|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Regen_LeverXChk : 32|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Park_Lamps : 33|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen2_Spike : 34|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen2_InputLo : 35|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen2_InputHi : 36|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen1_Spike : 37|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen1_InputLo : 38|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Manual_Regen1_InputHi : 39|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_WheelBar_Press1_InputHi : 40|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Trans_Temp_InputLo : 41|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Trans_Temp_InputHi : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Trans_Press_InputLo : 43|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Trans_Press_InputHi : 44|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_TransBrk_Sol : 45|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Shift_Sol : 46|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Reverse_Lamps : 47|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Wheel_Speed_NR_Spike : 48|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Wheel_Speed_NL_Spike : 49|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Wheel_Speed_DR_Spike : 50|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Wheel_Speed_DL_Spike : 51|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_Wheel_Speed_DD_Spike : 52|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_WheelBar_Press2_InputLo : 53|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_WheelBar_Press2_InputHi : 54|1@0+ (1,0) [0|1] ""  VCU
+ SG_ Fault_WheelBar_Press1_InputLo : 55|1@0+ (1,0) [0|1] ""  VCU
