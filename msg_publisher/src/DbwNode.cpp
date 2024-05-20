@@ -27,7 +27,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #include "msg_publisher/DbwNode.hpp"
-// #include "rclcpp_components/register_node_macro.hpp"
+#include "rclcpp_components/register_node_macro.hpp"
 #include <iostream>
 
 #include <algorithm>
@@ -895,4 +895,4 @@ void DbwNode::recvCAN0(const can_msgs::msg::Frame::SharedPtr msg)
 
 }  // namespace msg_publisher
 
-// RCLCPP_COMPONENTS_REGISTER_NODE(msg_publisher::DbwNode)
+RCLCPP_COMPONENTS_REGISTER_NODE(msg_publisher::DbwNode)
