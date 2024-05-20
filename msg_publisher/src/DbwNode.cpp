@@ -77,17 +77,18 @@ DbwNode::DbwNode(const rclcpp::NodeOptions & options)
   // dbwDbc_can2_ = NewEagle::DbcBuilder().NewDbc(dbcFile_can2_);
 
   timer_ams_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerAMSCallback, this));
+    50ms, std::bind(&DbwNode::timerAMSCallback, this));
   timer_brake_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerBrakeCallback, this));
+    50ms, std::bind(&DbwNode::timerBrakeCallback, this));
   timer_dash_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerDashCallback, this));
+    50ms, std::bind(&DbwNode::timerDashCallback, this));
   timer_suspension_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerSuspensionCallback, this));
+    50ms, std::bind(&DbwNode::timerSuspensionCallback, this));
   timer_vcu_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerVCUCallback, this));
+    50ms, std::bind(&DbwNode::timerVCUCallback, this));
   timer_inverter_report_ = this->create_wall_timer(
-    10ms, std::bind(&DbwNode::timerInverterCallback, this));
+    50ms, std::bind(&DbwNode::timerInverterCallback, this));
+
 }
 
 DbwNode::~DbwNode()

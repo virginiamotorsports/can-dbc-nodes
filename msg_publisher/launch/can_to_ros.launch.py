@@ -155,13 +155,13 @@ def generate_launch_description():
         share_file = get_share_file(package_name='msg_publisher', file_name=f'launch/{dbc_files[idx]}.dbc')
         parameter_dict[f'dbw_dbc_file_{can}'] = share_file
 
-    # can_frame_to_msg = Node(
-    #     package='msg_publisher',
-    #     executable='can_frame_to_msg_node',
-    #     output='screen',
-    #     parameters=[parameter_dict]
-    # )
+    can_frame_to_msg = Node(
+        package='msg_publisher',
+        executable='can_frame_to_msg_node',
+        output='screen',
+        parameters=[parameter_dict]
+    )
 
-    # node_arguments.append(can_frame_to_msg)
+    node_arguments.append(can_frame_to_msg)
 
     return LaunchDescription(launch_arguments + node_arguments)
