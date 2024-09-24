@@ -26,21 +26,45 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <memory>
+/**
+ * @file main.cpp
+ * @brief Entry point for the CAN message publisher node in the ROS2 system.
+ *
+ * This file contains the main function that initializes the ROS2 environment,
+ * creates the DBW (Drive-By-Wire) node responsible for publishing CAN messages, and starts
+ * the execution loop to handle communication with other devices on the CAN network.
+ * The node facilitates message broadcasting, enabling interaction with connected
+ * devices within the CAN-based system.
+ */
 
+#include <rclcpp/rclcpp.hpp>
+#include <memory>
 #include "msg_publisher/DbwNode.hpp"
 
-int main(int argc, char ** argv)
+/**
+ * @brief Initializes and runs the CAN message publisher node.
+ *
+ * Ran when ROS2 starts up. Initializes ROS2 and adds DbwNode to an executor.
+ *
+ * @param argc
+ * @param argv
+ * @return int
+ */
+int main(int argc, char **argv)
 {
+  // init
   rclcpp::init(argc, argv);
   rclcpp::NodeOptions options;
   rclcpp::executors::SingleThreadedExecutor exec;
 
-  auto node = std::make_shared<msg_publisher::DbwNode>(options);
-  exec.add_node(node->get_node_base_interface());
+  // create and configure the node
+  auto node = std::make_shared<msg_publisher::DbwNode>(options); // dbw node
+  exec.add_node(node->get_node_base_interface());                // add node to executor
+
+  // spin the executor to process callbacks (will block forever)
   exec.spin();
 
+  // cleanup
   rclcpp::shutdown();
-
   return 0;
 }
