@@ -33,8 +33,9 @@
  * This file defines the main method that is run when ros2 is launched.
  */
 
-#include <rclcpp/rclcpp.hpp>
 #include <memory>
+#include <rclcpp/rclcpp.hpp>
+
 #include "msg_publisher/DbwNode.hpp"
 
 /**
@@ -46,7 +47,7 @@
  * @param argv
  * @return int
  */
-int main(int argc, char **argv)
+int main(int argc, char ** argv)
 {
   // init
   rclcpp::init(argc, argv);
@@ -54,8 +55,8 @@ int main(int argc, char **argv)
   rclcpp::executors::SingleThreadedExecutor exec;
 
   // create and configure the node
-  auto node = std::make_shared<msg_publisher::DbwNode>(options); // dbw node
-  exec.add_node(node->get_node_base_interface());                // add node to executor
+  auto node = std::make_shared<msg_publisher::DbwNode>(options);  // dbw node
+  exec.add_node(node->get_node_base_interface());                 // add node to executor
 
   // spin the executor to process callbacks (will block forever)
   exec.spin();
