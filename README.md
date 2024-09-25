@@ -35,6 +35,27 @@ This repo contains the dbc files for the sensors, as well as defines the logic f
 
   - Read [https://docs.openvehicles.com/en/latest/components/vehicle_dbc/docs/dbc-primer.html](https://docs.openvehicles.com/en/latest/components/vehicle_dbc/docs/dbc-primer.html) for more information.
 
-## Contributing
+## Contributing Guidelines
 
-Ask the software lead!
+For most contributing questions: ask the software lead!
+
+### Installing the stylechecker
+
+1. Install clang-format using your package manager (e.g. brew install clang-format).
+2. Download the ROS 2 .clang-format file and place it in the root directory:
+   `wget https://raw.githubusercontent.com/ament/ament_lint/master/ament_clang_format/ament_clang_format/configuration/.clang-format`
+3. If using vscode, put the following line into `.vscode/settings.json`: `"C_Cpp.clang_format_style": "file"`
+4. Reload your editor if necessary.
+
+### other:
+
+from an old readme on this github:
+
+Running raptor_dbw_can with kvaser hardware:
+
+1. make sure kvaser-interface is built and installed first
+   clone this repository
+2. modify the launch parameters file in raptor_dbw_can/launch/launch_params.yaml -"hardware_id" is the serial number (S/N) for the kvaser hardware. This must match your hardware -"circuit_id" is the can channel number (0-n)
+3. in the terminal, with the path set to the base the workspace:
+   - `colcon build --packages-up-to raptor_dbw_can`
+   - `ros2 launch raptor_dbw_can raptor_dbw_can_launch.py`

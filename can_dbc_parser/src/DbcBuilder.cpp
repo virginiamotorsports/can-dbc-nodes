@@ -26,10 +26,14 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * @file DbcBuilder.cpp
+ * @brief NewEagle library file
+ */
+
 #include <can_dbc_parser/DbcBuilder.hpp>
 #include <can_dbc_parser/DbcMessage.hpp>
 #include <can_dbc_parser/DbcSignal.hpp>
-
 #include <map>
 #include <string>
 

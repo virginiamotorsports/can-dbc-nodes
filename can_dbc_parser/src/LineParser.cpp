@@ -26,8 +26,12 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <can_dbc_parser/LineParser.hpp>
+/**
+ * @file LineParser.cpp
+ * @brief NewEagle library file
+ */
 
+#include <can_dbc_parser/LineParser.hpp>
 #include <string>
 
 namespace NewEagle
@@ -38,10 +42,7 @@ LineParser::LineParser(const std::string & line)
   _position = 0;
 }
 
-int32_t LineParser::GetPosition()
-{
-  return _position;
-}
+int32_t LineParser::GetPosition() { return _position; }
 
 std::string LineParser::ReadCIdentifier()
 {
@@ -85,10 +86,7 @@ void LineParser::SkipWhitespace()
   }
 }
 
-bool LineParser::AtEOL()
-{
-  return _position >= static_cast<int32_t>(_line.length());
-}
+bool LineParser::AtEOL() { return _position >= static_cast<int32_t>(_line.length()); }
 
 char LineParser::ReadNextChar()
 {

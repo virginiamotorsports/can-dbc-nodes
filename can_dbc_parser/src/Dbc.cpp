@@ -26,8 +26,12 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <can_dbc_parser/Dbc.hpp>
+/**
+ * @file Dbc.cpp
+ * @brief NewEagle library file
+ */
 
+#include <can_dbc_parser/Dbc.hpp>
 #include <map>
 #include <string>
 #include <utility>
@@ -35,10 +39,7 @@
 namespace NewEagle
 {
 
-std::map<std::string, NewEagle::DbcMessage> * Dbc::GetMessages()
-{
-  return &_messages;
-}
+std::map<std::string, NewEagle::DbcMessage> * Dbc::GetMessages() { return &_messages; }
 
 void Dbc::AddMessage(NewEagle::DbcMessage message)
 {
@@ -63,8 +64,7 @@ NewEagle::DbcMessage * Dbc::GetMessage(std::string messageName)
 NewEagle::DbcMessage * Dbc::GetMessageById(uint32_t id)
 {
   for (std::map<std::string, NewEagle::DbcMessage>::iterator it = _messages.begin();
-    it != _messages.end(); it++)
-  {
+       it != _messages.end(); it++) {
     if (it->second.GetId() == id) {
       NewEagle::DbcMessage * message = &it->second;
 
@@ -75,8 +75,5 @@ NewEagle::DbcMessage * Dbc::GetMessageById(uint32_t id)
   return NULL;
 }
 
-uint16_t Dbc::GetMessageCount()
-{
-  return _messages.size();
-}
+uint16_t Dbc::GetMessageCount() { return _messages.size(); }
 }  // namespace NewEagle

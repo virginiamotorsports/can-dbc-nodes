@@ -26,25 +26,21 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+/**
+ * @file DbcMessage.cpp
+ * @brief NewEagle library file
+ */
 #include <can_dbc_parser/DbcMessage.hpp>
 #include <can_dbc_parser/DbcUtilities.hpp>
-
 #include <map>
 #include <string>
 #include <utility>
 
 namespace NewEagle
 {
-DbcMessage::DbcMessage()
-{
-}
+DbcMessage::DbcMessage() {}
 
-DbcMessage::DbcMessage(
-  uint8_t dlc,
-  uint32_t id,
-  IdType idType,
-  std::string name,
-  uint32_t rawId)
+DbcMessage::DbcMessage(uint8_t dlc, uint32_t id, IdType idType, std::string name, uint32_t rawId)
 {
   _dlc = dlc;
   _id = id;
@@ -53,30 +49,15 @@ DbcMessage::DbcMessage(
   _rawId = rawId;
 }
 
-uint8_t DbcMessage::GetDlc()
-{
-  return _dlc;
-}
+uint8_t DbcMessage::GetDlc() { return _dlc; }
 
-uint32_t DbcMessage::GetId()
-{
-  return _id;
-}
+uint32_t DbcMessage::GetId() { return _id; }
 
-uint32_t DbcMessage::GetRawId()
-{
-  return _rawId;
-}
+uint32_t DbcMessage::GetRawId() { return _rawId; }
 
-IdType DbcMessage::GetIdType()
-{
-  return _idType;
-}
+IdType DbcMessage::GetIdType() { return _idType; }
 
-std::string DbcMessage::GetName()
-{
-  return _name;
-}
+std::string DbcMessage::GetName() { return _name; }
 
 can_msgs::msg::Frame DbcMessage::GetFrame()
 {
@@ -91,8 +72,7 @@ can_msgs::msg::Frame DbcMessage::GetFrame()
 
   if (!AnyMultiplexedSignals()) {
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       Pack(ptr, it->second);
     }
   } else {
@@ -103,8 +83,7 @@ can_msgs::msg::Frame DbcMessage::GetFrame()
     NewEagle::DbcSignal * muxSwitch;  // only one multiplexer switch per message is allowed
 
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       if (NewEagle::NONE == it->second.GetMultiplexerMode()) {
         Pack(ptr, it->second);
       }
@@ -115,8 +94,7 @@ can_msgs::msg::Frame DbcMessage::GetFrame()
     }
 
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       if (NewEagle::MUX_SIGNAL == it->second.GetMultiplexerMode()) {
         if (muxSwitch->GetResult() == it->second.GetMultiplexerSwitch()) {
           Pack(ptr, it->second);
@@ -134,8 +112,7 @@ void DbcMessage::SetFrame(const can_msgs::msg::Frame::SharedPtr msg)
 
   if (!AnyMultiplexedSignals()) {
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       double res = Unpack(ptr, it->second);
       it->second.SetResult(res);
     }
@@ -147,8 +124,7 @@ void DbcMessage::SetFrame(const can_msgs::msg::Frame::SharedPtr msg)
     NewEagle::DbcSignal * muxSwitch;  // only one multiplexer switch per message is allowed
 
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       if (NewEagle::NONE == it->second.GetMultiplexerMode()) {
         double res = Unpack(ptr, it->second);
         it->second.SetResult(res);
@@ -161,8 +137,7 @@ void DbcMessage::SetFrame(const can_msgs::msg::Frame::SharedPtr msg)
     }
 
     for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-      it != _signals.end(); it++)
-    {
+         it != _signals.end(); it++) {
       if (NewEagle::MUX_SIGNAL == it->second.GetMultiplexerMode()) {
         if (muxSwitch->GetResult() == it->second.GetMultiplexerSwitch()) {
           double res = Unpack(ptr, it->second);
@@ -193,26 +168,16 @@ NewEagle::DbcSignal * DbcMessage::GetSignal(std::string signalName)
   return signal;
 }
 
-uint32_t DbcMessage::GetSignalCount()
-{
-  return _signals.size();
-}
+uint32_t DbcMessage::GetSignalCount() { return _signals.size(); }
 
-void DbcMessage::SetComment(NewEagle::DbcMessageComment comment)
-{
-  _comment = comment;
-}
+void DbcMessage::SetComment(NewEagle::DbcMessageComment comment) { _comment = comment; }
 
-std::map<std::string, NewEagle::DbcSignal> * DbcMessage::GetSignals()
-{
-  return &_signals;
-}
+std::map<std::string, NewEagle::DbcSignal> * DbcMessage::GetSignals() { return &_signals; }
 
 bool DbcMessage::AnyMultiplexedSignals()
 {
   for (std::map<std::string, NewEagle::DbcSignal>::iterator it = _signals.begin();
-    it != _signals.end(); it++)
-  {
+       it != _signals.end(); it++) {
     if (NewEagle::MUX_SWITCH == it->second.GetMultiplexerMode()) {
       return true;
     }

@@ -28,13 +28,9 @@
 
 /**
  * @file main.cpp
- * @brief Entry point for the CAN message publisher node in the ROS2 system.
+ * @brief Entry point for the ROS2.
  *
- * This file contains the main function that initializes the ROS2 environment,
- * creates the DBW (Drive-By-Wire) node responsible for publishing CAN messages, and starts
- * the execution loop to handle communication with other devices on the CAN network.
- * The node facilitates message broadcasting, enabling interaction with connected
- * devices within the CAN-based system.
+ * This file defines the main method that is run when ros2 is launched.
  */
 
 #include <rclcpp/rclcpp.hpp>
@@ -44,7 +40,7 @@
 /**
  * @brief Initializes and runs the CAN message publisher node.
  *
- * Ran when ROS2 starts up. Initializes ROS2 and adds DbwNode to an executor.
+ * This function is run when ROS2 starts up. Initializes ROS2 and adds DbwNode to an executor.
  *
  * @param argc
  * @param argv
