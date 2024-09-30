@@ -15,8 +15,8 @@ This repo contains the dbc files for the sensors, as well as defines the logic f
 
 - How do CAN and ROS2 interact?
 
-  - (?)
-
+  - CAN (Controller Area Network) and ROS 2 (Robot Operating System 2) can interact by utilizing ROS 2 nodes that handle communication over the CAN bus. A ROS 2 node is created to manage the CAN communication, allowing data from the CAN bus to be published to ROS 2 topics and commands from ROS 2 topics to be sent as CAN messages. Since CAN is known for deterministic timing and ROS2 is more real time, extra synchronization measures(?) should be configured. 
+  -
 - What is a dbc file?
 
   - DataBase CAN files define the process for decoding raw CAN bus data into physical values. For example, the following (signal) line defines how to process a segment of the data in a CAN message/frame:
